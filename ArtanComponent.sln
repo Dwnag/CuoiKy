@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtanComponent", "ArtanComponent\ArtanComponent.csproj", "{F90CCFEC-156A-4F8E-84F5-1B7A4AE205BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DangNhap", "DangNhap\DangNhap.csproj", "{12321D3B-337C-40D5-88E6-625CDEC21F1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F90CCFEC-156A-4F8E-84F5-1B7A4AE205BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F90CCFEC-156A-4F8E-84F5-1B7A4AE205BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F90CCFEC-156A-4F8E-84F5-1B7A4AE205BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F90CCFEC-156A-4F8E-84F5-1B7A4AE205BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12321D3B-337C-40D5-88E6-625CDEC21F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12321D3B-337C-40D5-88E6-625CDEC21F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12321D3B-337C-40D5-88E6-625CDEC21F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12321D3B-337C-40D5-88E6-625CDEC21F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D29E145-99DE-4B90-A848-0589D73DF378}
+	EndGlobalSection
+EndGlobal
