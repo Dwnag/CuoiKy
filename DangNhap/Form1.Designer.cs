@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.artanPanel1 = new ArtanComponent.ArtanPanel();
+            this.Hienmatkhau = new System.Windows.Forms.CheckBox();
             this.Thoat = new System.Windows.Forms.LinkLabel();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,6 +62,7 @@
             this.artanPanel1.BackColor = System.Drawing.Color.White;
             this.artanPanel1.BorderAngle = 90F;
             this.artanPanel1.BorderRadius = 40;
+            this.artanPanel1.Controls.Add(this.Hienmatkhau);
             this.artanPanel1.Controls.Add(this.Thoat);
             this.artanPanel1.Controls.Add(this.btnDangNhap);
             this.artanPanel1.Controls.Add(this.label2);
@@ -84,6 +86,21 @@
             this.artanPanel1.TabIndex = 0;
             this.artanPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.artanPanel1_Paint);
             // 
+            // Hienmatkhau
+            // 
+            this.Hienmatkhau.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Hienmatkhau.AutoSize = true;
+            this.Hienmatkhau.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Hienmatkhau.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hienmatkhau.Location = new System.Drawing.Point(223, 431);
+            this.Hienmatkhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Hienmatkhau.Name = "Hienmatkhau";
+            this.Hienmatkhau.Size = new System.Drawing.Size(164, 28);
+            this.Hienmatkhau.TabIndex = 12;
+            this.Hienmatkhau.Text = "Hiện mật khẩu";
+            this.Hienmatkhau.UseVisualStyleBackColor = true;
+            this.Hienmatkhau.CheckedChanged += new System.EventHandler(this.Hienmatkhau_CheckedChanged);
+            // 
             // Thoat
             // 
             this.Thoat.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -101,6 +118,7 @@
             // btnDangNhap
             // 
             this.btnDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDangNhap.BackColor = System.Drawing.Color.Silver;
             this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.Location = new System.Drawing.Point(267, 532);
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -108,8 +126,9 @@
             this.btnDangNhap.Size = new System.Drawing.Size(243, 67);
             this.btnDangNhap.TabIndex = 10;
             this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.UseVisualStyleBackColor = true;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);            // 
+            this.btnDangNhap.UseVisualStyleBackColor = false;
+            this.btnDangNhap.Click += new System.EventHandler(this.BtnDangNhap_Click);
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -153,7 +172,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.checkBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(193, 407);
+            this.checkBox1.Location = new System.Drawing.Point(99, 431);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(105, 28);
@@ -177,22 +196,30 @@
             // 
             this.matkhau.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matkhau.ForeColor = System.Drawing.Color.Silver;
             this.matkhau.Location = new System.Drawing.Point(162, 347);
             this.matkhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.matkhau.Name = "matkhau";
             this.matkhau.Size = new System.Drawing.Size(460, 35);
             this.matkhau.TabIndex = 5;
+            this.matkhau.Text = "Mật khẩu";
+            this.matkhau.Enter += new System.EventHandler(this.matkhau_Enter);
+            this.matkhau.Leave += new System.EventHandler(this.matkhau_Leave);
             // 
             // taikhoan
             // 
             this.taikhoan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.taikhoan.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taikhoan.ForeColor = System.Drawing.Color.Silver;
             this.taikhoan.Location = new System.Drawing.Point(162, 245);
             this.taikhoan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.taikhoan.Name = "taikhoan";
             this.taikhoan.Size = new System.Drawing.Size(452, 35);
             this.taikhoan.TabIndex = 4;
+            this.taikhoan.Text = "Tên đăng nhập";
             this.taikhoan.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.taikhoan.Enter += new System.EventHandler(this.Taikhoan_Enter);
+            this.taikhoan.Leave += new System.EventHandler(this.Taikhoan_Leave);
             // 
             // roundPictureBox2
             // 
@@ -209,7 +236,7 @@
             // 
             // roundPictureBox1
             // 
-            this.roundPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.roundPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.roundPictureBox1.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_022205;
             this.roundPictureBox1.Location = new System.Drawing.Point(267, 85);
             this.roundPictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -222,7 +249,8 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(141, 0);
@@ -231,6 +259,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng Nhập";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -253,10 +282,11 @@
             this.ClientSize = new System.Drawing.Size(1395, 850);
             this.Controls.Add(this.artanPanel1);
             this.Controls.Add(this.pictureBox1);
+            this.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.artanPanel1.ResumeLayout(false);
             this.artanPanel1.PerformLayout();
@@ -285,6 +315,7 @@
         private System.Windows.Forms.LinkLabel Thoat;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox Hienmatkhau;
     }
 }
 
