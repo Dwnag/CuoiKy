@@ -33,15 +33,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.artanPanel1 = new ArtanComponent.ArtanPanel();
+            this.roundPictureBox1 = new ArtanComponent.RoundPictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnDangNhap = new System.Windows.Forms.Button();
+            this.btnDangKy = new System.Windows.Forms.Button();
             this.email = new System.Windows.Forms.TextBox();
             this.nhaplaimatkhau = new System.Windows.Forms.TextBox();
             this.matkhau = new System.Windows.Forms.TextBox();
             this.tendanhnhap = new System.Windows.Forms.TextBox();
-            this.roundPictureBox1 = new ArtanComponent.RoundPictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.artanPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
@@ -75,7 +75,7 @@
             this.artanPanel1.Controls.Add(this.label1);
             this.artanPanel1.Controls.Add(this.linkLabel2);
             this.artanPanel1.Controls.Add(this.label2);
-            this.artanPanel1.Controls.Add(this.btnDangNhap);
+            this.artanPanel1.Controls.Add(this.btnDangKy);
             this.artanPanel1.Controls.Add(this.email);
             this.artanPanel1.Controls.Add(this.nhaplaimatkhau);
             this.artanPanel1.Controls.Add(this.matkhau);
@@ -89,6 +89,28 @@
             this.artanPanel1.Name = "artanPanel1";
             this.artanPanel1.Size = new System.Drawing.Size(656, 669);
             this.artanPanel1.TabIndex = 2;
+            // 
+            // roundPictureBox1
+            // 
+            this.roundPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.roundPictureBox1.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_022205;
+            this.roundPictureBox1.Location = new System.Drawing.Point(267, 85);
+            this.roundPictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.roundPictureBox1.Name = "roundPictureBox1";
+            this.roundPictureBox1.Size = new System.Drawing.Size(142, 132);
+            this.roundPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox1.TabIndex = 14;
+            this.roundPictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(141, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(408, 108);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Đăng Ký Tài Khoản";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linkLabel2
             // 
@@ -114,18 +136,20 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Bạn đã có tài khoản";
             // 
-            // btnDangNhap
+            // btnDangKy
             // 
-            this.btnDangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
-            this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.Location = new System.Drawing.Point(219, 481);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(243, 67);
-            this.btnDangNhap.TabIndex = 19;
-            this.btnDangNhap.Text = "ĐĂNG KÝ NGAY";
-            this.btnDangNhap.UseVisualStyleBackColor = false;
+            this.btnDangKy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDangKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.btnDangKy.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKy.Location = new System.Drawing.Point(219, 481);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(243, 67);
+            this.btnDangKy.TabIndex = 19;
+            this.btnDangKy.Text = "ĐĂNG KÝ NGAY";
+            this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
+            this.btnDangKy.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnDangKy_KeyDown);
             // 
             // email
             // 
@@ -181,30 +205,6 @@
             this.tendanhnhap.Text = "Tên đăng nhập";
             this.tendanhnhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // roundPictureBox1
-            // 
-            this.roundPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.roundPictureBox1.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_022205;
-            this.roundPictureBox1.Location = new System.Drawing.Point(267, 85);
-            this.roundPictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.roundPictureBox1.Name = "roundPictureBox1";
-            this.roundPictureBox1.Size = new System.Drawing.Size(142, 132);
-            this.roundPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox1.TabIndex = 14;
-            this.roundPictureBox1.TabStop = false;
-            this.roundPictureBox1.Click += new System.EventHandler(this.roundPictureBox1_Click);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(141, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(408, 108);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Đăng Ký Tài Khoản";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -230,7 +230,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.Button btnDangKy;
         private System.Windows.Forms.TextBox email;
         private System.Windows.Forms.TextBox nhaplaimatkhau;
         private System.Windows.Forms.TextBox matkhau;

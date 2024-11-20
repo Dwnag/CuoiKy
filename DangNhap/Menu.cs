@@ -67,6 +67,11 @@ namespace DangNhap
         {
             this.Close();
         }
+
+        private void btnLeTan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

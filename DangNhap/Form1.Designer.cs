@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.artanPanel1 = new ArtanComponent.ArtanPanel();
-            this.Hienmatkhau = new System.Windows.Forms.CheckBox();
             this.Thoat = new System.Windows.Forms.LinkLabel();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.roundPictureBox1 = new ArtanComponent.RoundPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Hienmatkhau = new System.Windows.Forms.CheckBox();
             this.artanPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox2)).BeginInit();
@@ -274,6 +274,20 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Hienmatkhau
+            // 
+            this.Hienmatkhau.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Hienmatkhau.AutoSize = true;
+            this.Hienmatkhau.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Hienmatkhau.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hienmatkhau.Location = new System.Drawing.Point(219, 431);
+            this.Hienmatkhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Hienmatkhau.Name = "Hienmatkhau";
+            this.Hienmatkhau.Size = new System.Drawing.Size(164, 28);
+            this.Hienmatkhau.TabIndex = 12;
+            this.Hienmatkhau.Text = "Hiện mật khẩu";
+            this.Hienmatkhau.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

@@ -21,6 +21,7 @@ namespace DangNhap
             InitializeComponent();
             matkhau.KeyDown += matkhau_KeyDown;
             taikhoan.KeyDown += TaiKhoan_KeyDown;
+            matkhau.TextChanged += matkhau_TextChanged;
         }
 
         //Nhan enter de xuong dong
@@ -56,7 +57,7 @@ namespace DangNhap
             string MatKhau = matkhau.Text;
             try
             {
-                String querry = "Select * FROM Login WHERE TaiKhoan = '" + taikhoan.Text + "' AND MatKhau = '" + matkhau.Text + "' ";
+                String querry = "Select * FROM ThongTinDangNhap WHERE TaiKhoan = '" + taikhoan.Text + "' AND MatKhau = '" + matkhau.Text + "' ";
                 SqlDataAdapter adt = new SqlDataAdapter(querry, connet);
 
                 DataTable dt = new DataTable();
@@ -118,17 +119,19 @@ namespace DangNhap
             this.Hide();
         }
 
+        private void matkhau_TextChanged(object sender, EventArgs e)
+        {
+            matkhau.PasswordChar = Hienmatkhau.Checked ? '\0' : '*';
+        }
+
+
+
         private void Hienmatkhau_CheckedChanged(object sender, EventArgs e)
         {
-            if (Hienmatkhau.Checked)
-            {
-                matkhau.PasswordChar = '\0';
-            }
-            else
-            {
-                matkhau.PasswordChar = '*';
-            }
+            // Đồng bộ trạng thái hiển thị mật khẩu khi checkbox thay đổi
+            matkhau.PasswordChar = Hienmatkhau.Checked ? '\0' : '*';
         }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -189,7 +192,9 @@ namespace DangNhap
             {
                 matkhau.Text = "";
                 matkhau.ForeColor = Color.Black;
-                matkhau.PasswordChar = '*';
+
+                // Kiểm tra trạng thái của checkbox để quyết định PasswordChar
+                matkhau.PasswordChar = Hienmatkhau.Checked ? '\0' : '*';
             }
         }
 
@@ -197,10 +202,13 @@ namespace DangNhap
         {
             if (matkhau.Text == "")
             {
-                matkhau.Text = "Mật khẩu";  
+                matkhau.Text = "Mật khẩu";
                 matkhau.ForeColor = Color.Silver;
+
+                // Reset PasswordChar về trạng thái mặc định khi rời khỏi TextBox
                 matkhau.PasswordChar = '\0';
             }
         }
+
     }
 }
