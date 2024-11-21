@@ -127,7 +127,7 @@
             // 
             this.roundPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roundPictureBox1.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_022205;
-            this.roundPictureBox1.Location = new System.Drawing.Point(244, 77);
+            this.roundPictureBox1.Location = new System.Drawing.Point(242, 87);
             this.roundPictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.roundPictureBox1.Name = "roundPictureBox1";
             this.roundPictureBox1.Size = new System.Drawing.Size(142, 132);
