@@ -30,8 +30,11 @@ namespace DangNhap
 
         private void btn_laylaimatkhau_Click(object sender, EventArgs e)
         {
-
-            EmailHelper.recoverPassword("user123");
+            EmailHelper emailHelper = new EmailHelper();
+   
+            string emailInput = textBox1.Text;    
+            // Gọi phương thức phục hồi mật khẩu
+            emailHelper.recoverPassword(emailInput, lblError3);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -78,6 +81,19 @@ namespace DangNhap
 
         }
 
-        
+        private void lblError3_Click()
+        {
+            this.Controls.Add(lblError3);
+            lblError3.Visible = false;
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = false;
+            }
+        }
     }
 }

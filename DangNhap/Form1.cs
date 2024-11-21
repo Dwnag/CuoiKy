@@ -98,7 +98,6 @@ namespace DangNhap
 
                     taikhoan.Clear();
                     matkhau.Clear();
-
                     taikhoan.Focus();
 
                 }

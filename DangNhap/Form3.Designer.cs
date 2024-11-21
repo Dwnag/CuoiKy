@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblError3 = new System.Windows.Forms.Label();
             this.backToLogin = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.linkSignIn = new System.Windows.Forms.LinkLabel();
@@ -59,6 +60,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.lblError3);
             this.panel1.Controls.Add(this.backToLogin);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.linkSignIn);
@@ -71,6 +73,18 @@
             this.panel1.Size = new System.Drawing.Size(1130, 577);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblError3
+            // 
+            this.lblError3.AutoSize = true;
+            this.lblError3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError3.ForeColor = System.Drawing.Color.Red;
+            this.lblError3.Location = new System.Drawing.Point(207, 237);
+            this.lblError3.Name = "lblError3";
+            this.lblError3.Size = new System.Drawing.Size(37, 22);
+            this.lblError3.TabIndex = 42;
+            this.lblError3.Text = "Lỗi";
+            this.lblError3.Visible = false;
             // 
             // backToLogin
             // 
@@ -138,6 +152,7 @@
             this.textBox1.Size = new System.Drawing.Size(657, 49);
             this.textBox1.TabIndex = 35;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label2
             // 
@@ -193,5 +208,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkSignIn;
         private System.Windows.Forms.Button backToLogin;
+        private System.Windows.Forms.Label lblError3;
     }
 }
