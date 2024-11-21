@@ -9,23 +9,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DangNhap
 {
     public partial class Form1 : Form
     {
-        private SqlConnection connet = new SqlConnection(@"Data Source=D-LAP;Initial Catalog=ql1;Integrated Security=True");
+        private readonly SqlConnection connet = new SqlConnection(@"Data Source=D-LAP;Initial Catalog=ql1;Integrated Security=True");
         
         public Form1()
         {
             InitializeComponent();
             matkhau.KeyDown += matkhau_KeyDown;
-            taikhoan.KeyDown += TaiKhoan_KeyDown;
+            taikhoan.KeyDown += taiKhoan_KeyDown;
             matkhau.TextChanged += matkhau_TextChanged;
         }
 
-        //Nhan enter de xuong dong
-        private void TaiKhoan_KeyDown(object sender, KeyEventArgs e)
+        //Nhan tabs de xuong dong
+        private void taiKhoan_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Tab)
             {
@@ -40,18 +41,18 @@ namespace DangNhap
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Login();
+                login();
                 e.Handled = true; 
                 e.SuppressKeyPress = true; 
             }
         }
 
-        private void BtnDangNhap_Click(object sender, EventArgs e)
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            Login();
+            login();
         }
 
-        private void Login()
+        private void login()
         {
             string TenTaiKhoan = taikhoan.Text;
             string MatKhau = matkhau.Text;
@@ -107,7 +108,7 @@ namespace DangNhap
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void form1_Load(object sender, EventArgs e)
         {
            
         }
@@ -126,7 +127,7 @@ namespace DangNhap
 
 
 
-        private void Hienmatkhau_CheckedChanged(object sender, EventArgs e)
+        private void hienmatkhau_CheckedChanged(object sender, EventArgs e)
         {
             // Đồng bộ trạng thái hiển thị mật khẩu khi checkbox thay đổi
             matkhau.PasswordChar = Hienmatkhau.Checked ? '\0' : '*';
@@ -168,7 +169,7 @@ namespace DangNhap
 
         }
 
-        private void Taikhoan_Enter(object sender, EventArgs e)
+        private void taikhoan_Enter(object sender, EventArgs e)
         {
             if (taikhoan.Text == "Tên đăng nhập")
             {
@@ -177,7 +178,7 @@ namespace DangNhap
             }
         }
 
-        private void Taikhoan_Leave(object sender, EventArgs e)
+        private void taikhoan_Leave(object sender, EventArgs e)
         {
             if (taikhoan.Text == "")
             {
@@ -210,5 +211,13 @@ namespace DangNhap
             }
         }
 
+        private void taikhoan_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab)
+            {
+                e.IsInputKey = true; // Ngừng hành vi mặc định của phím Tab
+                taikhoan.Focus(); // Di chuyển con trỏ đến textBox1
+            }
+        }
     }
 }
