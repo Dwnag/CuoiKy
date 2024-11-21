@@ -134,7 +134,7 @@ namespace DangNhap
 
         private void form1_Load(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -265,5 +265,6 @@ namespace DangNhap
             this.Controls.Add(lblError);
         }
 
+        
     }
 }

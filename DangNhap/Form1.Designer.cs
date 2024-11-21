@@ -38,7 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ghiNho = new System.Windows.Forms.CheckBox();
             this.roundPictureBox3 = new ArtanComponent.RoundPictureBox();
             this.matkhau = new System.Windows.Forms.TextBox();
             this.taikhoan = new System.Windows.Forms.TextBox();
@@ -74,7 +74,7 @@
             this.artanPanel1.Controls.Add(this.label2);
             this.artanPanel1.Controls.Add(this.linkLabel2);
             this.artanPanel1.Controls.Add(this.linkLabel1);
-            this.artanPanel1.Controls.Add(this.checkBox1);
+            this.artanPanel1.Controls.Add(this.ghiNho);
             this.artanPanel1.Controls.Add(this.roundPictureBox3);
             this.artanPanel1.Controls.Add(this.matkhau);
             this.artanPanel1.Controls.Add(this.taikhoan);
@@ -198,19 +198,19 @@
             this.linkLabel1.Text = "Quên mật khẩu?";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // checkBox1
+            // ghiNho
             // 
-            this.checkBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(69, 423);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(105, 28);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Ghi nhớ";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ghiNho.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.ghiNho.AutoSize = true;
+            this.ghiNho.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ghiNho.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ghiNho.Location = new System.Drawing.Point(69, 423);
+            this.ghiNho.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ghiNho.Name = "ghiNho";
+            this.ghiNho.Size = new System.Drawing.Size(105, 28);
+            this.ghiNho.TabIndex = 6;
+            this.ghiNho.Text = "Ghi nhớ";
+            this.ghiNho.UseVisualStyleBackColor = true;
             // 
             // roundPictureBox3
             // 
@@ -358,7 +358,7 @@
         private System.Windows.Forms.TextBox taikhoan;
         private System.Windows.Forms.TextBox matkhau;
         private ArtanComponent.RoundPictureBox roundPictureBox3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox ghiNho;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;

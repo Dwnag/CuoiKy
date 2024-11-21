@@ -31,5 +31,41 @@ namespace DangNhap.Properties {
                 return ((global::System.Drawing.Point)(this["a"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool GhiNho {
+            get {
+                return ((bool)(this["GhiNho"]));
+            }
+            set {
+                this["GhiNho"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string TaiKhoan {
+            get {
+                return ((string)(this["TaiKhoan"]));
+            }
+            set {
+                this["TaiKhoan"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string MatKhau {
+            get {
+                return ((string)(this["MatKhau"]));
+            }
+            set {
+                this["MatKhau"] = value;
+            }
+        }
     }
 }
