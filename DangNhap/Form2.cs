@@ -14,7 +14,7 @@ namespace DangNhap
 {
     public partial class Form2 : Form
     {
-        private SqlConnection connet = new SqlConnection(@"Data Source=D-LAP;Initial Catalog=ql1;Integrated Security=True");
+        private readonly SqlConnection connet = new SqlConnection(@"Data Source=D-LAP;Initial Catalog=ql1;Integrated Security=True");
 
         public Form2()
         {
@@ -105,7 +105,7 @@ namespace DangNhap
         }
 
         //Đăng Ký
-        private void SignIn()
+        private void signIn()
         {
             // Kiểm tra xem người dùng đã nhập đầy đủ thông tin chưa
             if (tendanhnhap.Text == "Tên đăng nhập" || matkhau.Text == "Mật khẩu" || nhaplaimatkhau.Text == "Nhập lại mật khẩu" || email.Text == "Email" || tendanhnhap.Text == "Tên đăng nhập" || matkhau.Text == "Mật khẩu" || nhaplaimatkhau.Text == "Nhập lại mật khẩu" || email.Text == "Email")
@@ -137,7 +137,7 @@ namespace DangNhap
                         if (result > 0)
                         {
                             MessageBox.Show("Đăng ký thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            BackToLogin();
+                            backToLogin();
                         }
                         else
                         {
@@ -157,7 +157,7 @@ namespace DangNhap
         }
 
         //Trở lại giao diện đăng nhập
-        private void BackToLogin()
+        private void backToLogin()
         {
             Form1 form1 = new Form1();
             form1.Show();
@@ -165,18 +165,18 @@ namespace DangNhap
         }
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            BackToLogin();
+            backToLogin();
         }
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-           SignIn();
+           signIn();
         }
 
         private void btnDangKy_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                SignIn();
+                signIn();
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }

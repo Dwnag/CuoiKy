@@ -10,6 +10,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7AF2476F-4F24-41C2-B6C6-C5222E4E557D}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		DangNhap\Form3.cs = DangNhap\Form3.cs
+		DangNhap\Form3.Designer.cs = DangNhap\Form3.Designer.cs
+		DangNhap\Form3.resx = DangNhap\Form3.resx
 	EndProjectSection
 EndProject
 Global

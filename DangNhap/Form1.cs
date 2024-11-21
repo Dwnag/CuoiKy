@@ -233,5 +233,12 @@ namespace DangNhap
                 taikhoan.Focus();  
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+            this.Close();
+        }
     }
 }
