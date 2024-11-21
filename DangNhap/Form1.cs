@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DangNhap
 {
@@ -32,7 +33,6 @@ namespace DangNhap
             {
                 e.Handled = true;
                 e.SuppressKeyPress = true;
-                SelectNextControl((Control)sender, true, true, true, true);                     
             }
         }
 
@@ -75,6 +75,11 @@ namespace DangNhap
                 }
                 else
                 {
+                    if (taikhoan.Text == "Tên đăng nhập" || matkhau.Text == "Mật khẩu" || taikhoan.Text == "Tên đăng nhập" || matkhau.Text == "Mật khẩu")
+                    {
+                        MessageBox.Show("Vui lòng điền đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                     MessageBox.Show("Thông tin đăng nhập không chính xác!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     taikhoan.Clear();
                     matkhau.Clear();
@@ -215,8 +220,17 @@ namespace DangNhap
         {
             if (e.KeyCode == Keys.Tab)
             {
-                e.IsInputKey = true; // Ngừng hành vi mặc định của phím Tab
-                taikhoan.Focus(); // Di chuyển con trỏ đến textBox1
+                e.IsInputKey = true; 
+                matkhau.Focus(); 
+            }
+        }
+
+        private void matkhau_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab)
+            {
+                e.IsInputKey = true;
+                taikhoan.Focus();  
             }
         }
     }

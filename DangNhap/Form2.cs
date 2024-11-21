@@ -181,5 +181,10 @@ namespace DangNhap
                 e.SuppressKeyPress = true;
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
