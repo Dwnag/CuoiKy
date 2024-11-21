@@ -264,6 +264,7 @@
             this.Controls.Add(this.roundPictureBox4);
             this.Controls.Add(this.artanPanel1);
             this.Controls.Add(this.pictureBox1);
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "Form2";
             this.Text = "Đăng Ký";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

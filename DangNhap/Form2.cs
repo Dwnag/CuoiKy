@@ -37,7 +37,11 @@ namespace DangNhap
             matkhau.KeyDown += matkhau_KeyDown;
             nhaplaimatkhau.KeyDown += nhaplaimatkhau_KeyDown;
             email.KeyDown += email_KeyDown;
-            //button
+
+            //khởi động giao diện tại vị trí xác định
+            this.StartPosition = FormStartPosition.CenterScreen;
+            //dừng chương trình khi nhấn x
+            FormEventHandler.exitProgram(this);
         }
 
         // Sự kiện khi nhấn vào textbox
@@ -253,6 +257,6 @@ namespace DangNhap
             this.Controls.Add(lblError2);
         }
 
-        
+
     }
 }

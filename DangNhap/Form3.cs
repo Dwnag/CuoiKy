@@ -21,6 +21,7 @@ namespace DangNhap
         public Form3()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
 
@@ -35,6 +36,8 @@ namespace DangNhap
             string emailInput = textBox1.Text;    
             // Gọi phương thức phục hồi mật khẩu
             emailHelper.recoverPassword(emailInput, lblError3);
+            //dừng chương trình khi nhấn x
+            FormEventHandler.exitProgram(this);
         }
 
         private void label2_Click(object sender, EventArgs e)

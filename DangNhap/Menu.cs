@@ -15,12 +15,24 @@ namespace DangNhap
         public Menu()
         {
             InitializeComponent();
+            //khởi động giao diện tại vị trí xác định
+            this.StartPosition = FormStartPosition.CenterScreen;
+            //dừng chương trình khi nhấn x
+            FormEventHandler.exitProgram(this);
         }
 
-        private void Menu_Load(object sender, EventArgs e)
+        private void menu_Load(object sender, EventArgs e)
         {
-            //PhanQuyen();
         }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bạn muốn đăng xuất.", "Đăng xuất", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide();
+        }
+
 
         //void PhanQuyen()
         //{
@@ -63,15 +75,6 @@ namespace DangNhap
         //    }
         //}
 
-        private void btnDangXuat_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnLeTan_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 

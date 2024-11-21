@@ -331,6 +331,7 @@
             this.Controls.Add(this.artanPanel1);
             this.Controls.Add(this.pictureBox1);
             this.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.Location = new System.Drawing.Point(100, 100);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
