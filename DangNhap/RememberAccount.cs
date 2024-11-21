@@ -1,41 +1,35 @@
 ﻿using System;
 using System.IO;
+using System.Windows.Forms;
 
 namespace DangNhap
 {
     public static class AccountManager
     {
-        private static string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "account.txt");
-
-        public static bool IsAccountSaved()
+        public static void saveAccountInfo(string username, string password)
         {
-            return File.Exists(filePath);
+            Properties.Settings.Default.User = username;
+            Properties.Settings.Default.Password = password;
+            Properties.Settings.Default.Save();
         }
 
-        public static (string Username, string Password) GetSavedAccountInfo()
+        public static void clearAccountInfo()
         {
-            if (IsAccountSaved())
-            {
-                string[] lines = File.ReadAllLines(filePath);
-                if (lines.Length == 2)
-                {
-                    return (lines[0], lines[1]);
-                }
-            }
-            return (string.Empty, string.Empty);
+            Properties.Settings.Default.User = string.Empty;
+            Properties.Settings.Default.Password = string.Empty;
+            Properties.Settings.Default.Save();
         }
 
-        public static void SaveAccountInfo(string username, string password)
+        public static bool isAccountSaved()
         {
-            File.WriteAllLines(filePath, new[] { username, password });
+            return !string.IsNullOrEmpty(Properties.Settings.Default.User) &&
+                   !string.IsNullOrEmpty(Properties.Settings.Default.Password);
         }
 
-        public static void ClearAccountInfo()
+        public static (string Username, string Password) getSavedAccountInfo()
         {
-            if (File.Exists(filePath))
-            {
-                File.Delete(filePath);
-            }
+            return (Properties.Settings.Default.User, Properties.Settings.Default.Password);
         }
     }
+
 }

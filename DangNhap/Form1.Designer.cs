@@ -211,6 +211,7 @@
             this.ghiNho.TabIndex = 6;
             this.ghiNho.Text = "Ghi nhớ";
             this.ghiNho.UseVisualStyleBackColor = true;
+            this.ghiNho.CheckedChanged += new System.EventHandler(this.ghiNho_CheckedChanged);
             // 
             // roundPictureBox3
             // 

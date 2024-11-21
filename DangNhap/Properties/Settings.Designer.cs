@@ -47,24 +47,24 @@ namespace DangNhap.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string TaiKhoan {
+        public string User {
             get {
-                return ((string)(this["TaiKhoan"]));
+                return ((string)(this["User"]));
             }
             set {
-                this["TaiKhoan"] = value;
+                this["User"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string MatKhau {
+        public string Password {
             get {
-                return ((string)(this["MatKhau"]));
+                return ((string)(this["Password"]));
             }
             set {
-                this["MatKhau"] = value;
+                this["Password"] = value;
             }
         }
     }

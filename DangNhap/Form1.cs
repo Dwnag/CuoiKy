@@ -134,8 +134,44 @@ namespace DangNhap
 
         private void form1_Load(object sender, EventArgs e)
         {
-            
+            if (AccountManager.isAccountSaved()) // Kiểm tra nếu tài khoản đã được lưu
+            {
+                var account = AccountManager.getSavedAccountInfo();
+                taikhoan.Text = account.Username;
+                matkhau.Text = account.Password;
+                ghiNho.Checked = true;  // Tích chọn checkbox "Ghi nhớ"
+                taikhoan.ForeColor = Color.Black;
+                matkhau.ForeColor = Color.Black;
+            }
         }
+        //ghi nhớ
+        private void ghiNho_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ghiNho.Checked)
+            {
+                // Nếu người dùng đã chọn ghi nhớ và có thông tin, lưu thông tin tài khoản và mật khẩu
+                if (!string.IsNullOrEmpty(taikhoan.Text) && !string.IsNullOrEmpty(matkhau.Text) &&
+                    taikhoan.Text != "Tên đăng nhập" && matkhau.Text != "Mật khẩu")
+                {
+                    AccountManager.saveAccountInfo(taikhoan.Text, matkhau.Text);
+                }
+                else
+                {
+                    taikhoan.ForeColor = Color.Silver;
+                    matkhau.ForeColor = Color.Silver;
+                }
+            }
+            else
+            {
+                AccountManager.clearAccountInfo();
+                if (taikhoan.Text == "Tên đăng nhập" || taikhoan.Text == "" || matkhau.Text == "Mật khẩu" || matkhau.Text == "")
+                {
+                    taikhoan.ForeColor = Color.Silver;
+                    matkhau.ForeColor = Color.Silver;
+                }
+            }
+        }
+
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -264,7 +300,5 @@ namespace DangNhap
         {
             this.Controls.Add(lblError);
         }
-
-        
     }
 }
