@@ -81,12 +81,6 @@ namespace DangNhap
 
         }
 
-        private void lblError3_Click()
-        {
-            this.Controls.Add(lblError3);
-            lblError3.Visible = false;
-        }
-
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
