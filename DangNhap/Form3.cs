@@ -4,10 +4,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Data.SqlClient;
+using static System.Net.Mime.MediaTypeNames;
+using static DangNhap.EmailHelper;
 
 namespace DangNhap
 {
@@ -16,6 +21,17 @@ namespace DangNhap
         public Form3()
         {
             InitializeComponent();
+        }
+
+
+        //gửi mail
+
+        
+
+        private void btn_laylaimatkhau_Click(object sender, EventArgs e)
+        {
+
+            EmailHelper.recoverPassword("user123");
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -62,24 +78,6 @@ namespace DangNhap
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
