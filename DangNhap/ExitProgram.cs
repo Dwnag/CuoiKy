@@ -9,6 +9,11 @@ namespace MyApp.Utilities
 
         public static void exitProgram(Form form, FormClosingEventArgs e)
         {
+            if (form is null)
+            {
+                throw new ArgumentNullException(nameof(form));
+            }
+
             if (!isMessageBoxShown)
             {
                 isMessageBoxShown = true;

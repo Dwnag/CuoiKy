@@ -196,7 +196,6 @@
             this.email.Text = "Email";
             this.email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.email.MouseClick += new System.Windows.Forms.MouseEventHandler(this.email_MouseClick);
-            this.email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.email_KeyDown);
             // 
             // nhaplaimatkhau
             // 
@@ -211,7 +210,6 @@
             this.nhaplaimatkhau.Text = "Nhập lại mật khẩu";
             this.nhaplaimatkhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nhaplaimatkhau.MouseClick += new System.Windows.Forms.MouseEventHandler(this.nhaplaimatkhau_MouseClick);
-            this.nhaplaimatkhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nhaplaimatkhau_KeyDown);
             // 
             // matkhau
             // 
@@ -226,7 +224,6 @@
             this.matkhau.Text = "Mật khẩu";
             this.matkhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.matkhau.MouseClick += new System.Windows.Forms.MouseEventHandler(this.matkhau_MouseClick);
-            this.matkhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.matkhau_KeyDown);
             // 
             // tendanhnhap
             // 
@@ -243,7 +240,6 @@
             this.tendanhnhap.Text = "Tên đăng nhập";
             this.tendanhnhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tendanhnhap.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tendanhnhap_MouseClick);
-            this.tendanhnhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tendanhnhap_KeyDown);
             // 
             // roundPictureBox4
             // 

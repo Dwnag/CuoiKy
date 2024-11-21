@@ -16,7 +16,7 @@ namespace DangNhap
     public partial class Form2 : Form
     {
         private readonly SqlConnection connet = new SqlConnection(@"Data Source=D-LAP;Initial Catalog=ql1;Integrated Security=True");
-
+        private bool isSignInInProgress = false;
         public Form2()
         {
             InitializeComponent();
@@ -34,10 +34,8 @@ namespace DangNhap
             email.Leave += email_Leave;
 
             //keydown
-            tendanhnhap.KeyDown += tendanhnhap_KeyDown;
-            matkhau.KeyDown += matkhau_KeyDown;
-            nhaplaimatkhau.KeyDown += nhaplaimatkhau_KeyDown;
-            email.KeyDown += email_KeyDown;
+            this.KeyPreview = true;  // Đảm bảo form nhận được sự kiện KeyDown
+            this.KeyDown += form_KeyDown;
 
             //khởi động giao diện tại vị trí xác định
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -114,45 +112,16 @@ namespace DangNhap
                 email.ForeColor = Color.Silver;
             }
         }
-        
+
         //keydown
-        private void tendanhnhap_KeyDown(object sender, KeyEventArgs e)
+        private void form_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            // Kiểm tra nếu người dùng nhấn Enter
+            if (e.KeyCode == Keys.Enter && !isSignInInProgress)
             {
-                signIn();
-                e.Handled = true;
-                e.SuppressKeyPress = true;
-            }
-        }
-
-        private void matkhau_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                signIn();
-                e.Handled = true;
-                e.SuppressKeyPress = true;
-            }
-        }
-
-        private void nhaplaimatkhau_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                signIn();
-                e.Handled = true;
-                e.SuppressKeyPress = true;
-            }
-        }
-
-        private void email_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                e.Handled = true;
-                e.SuppressKeyPress = true;
-                signIn();
+                isSignInInProgress = true;  // Đánh dấu là đang xử lý đăng nhập
+                signIn();  // Gọi phương thức đăng ký
+                e.Handled = true;  // Ngừng sự kiện
             }
         }
         //MouseClick
@@ -232,7 +201,7 @@ namespace DangNhap
         {
             Form1 form1 = new Form1();
             form1.Show();
-            this.Close();
+            this.Hide();
         }
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
