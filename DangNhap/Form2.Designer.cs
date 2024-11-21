@@ -33,6 +33,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.artanPanel1 = new ArtanComponent.ArtanPanel();
+            this.lblError2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.roundPictureBox1 = new ArtanComponent.RoundPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
@@ -42,12 +44,11 @@
             this.nhaplaimatkhau = new System.Windows.Forms.TextBox();
             this.matkhau = new System.Windows.Forms.TextBox();
             this.tendanhnhap = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.roundPictureBox4 = new ArtanComponent.RoundPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.artanPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +77,7 @@
             this.artanPanel1.BackColor = System.Drawing.Color.White;
             this.artanPanel1.BorderAngle = 90F;
             this.artanPanel1.BorderRadius = 40;
+            this.artanPanel1.Controls.Add(this.lblError2);
             this.artanPanel1.Controls.Add(this.pictureBox2);
             this.artanPanel1.Controls.Add(this.roundPictureBox1);
             this.artanPanel1.Controls.Add(this.label1);
@@ -96,6 +98,30 @@
             this.artanPanel1.Size = new System.Drawing.Size(611, 653);
             this.artanPanel1.TabIndex = 2;
             this.artanPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.artanPanel1_Paint);
+            // 
+            // lblError2
+            // 
+            this.lblError2.AutoSize = true;
+            this.lblError2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError2.ForeColor = System.Drawing.Color.Red;
+            this.lblError2.Location = new System.Drawing.Point(116, 461);
+            this.lblError2.Name = "lblError2";
+            this.lblError2.Size = new System.Drawing.Size(60, 22);
+            this.lblError2.TabIndex = 24;
+            this.lblError2.Text = "label3";
+            this.lblError2.Visible = false;
+            this.lblError2.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(542, 605);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(66, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
             // 
             // roundPictureBox1
             // 
@@ -124,7 +150,7 @@
             this.linkLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Times New Roman", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(333, 561);
+            this.linkLabel2.Location = new System.Drawing.Point(332, 577);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(204, 32);
             this.linkLabel2.TabIndex = 21;
@@ -137,7 +163,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(115, 565);
+            this.label2.Location = new System.Drawing.Point(114, 581);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(212, 28);
             this.label2.TabIndex = 20;
@@ -148,7 +174,7 @@
             this.btnDangKy.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDangKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
             this.btnDangKy.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKy.Location = new System.Drawing.Point(196, 473);
+            this.btnDangKy.Location = new System.Drawing.Point(195, 494);
             this.btnDangKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(243, 67);
@@ -156,7 +182,6 @@
             this.btnDangKy.Text = "ĐĂNG KÝ NGAY";
             this.btnDangKy.UseVisualStyleBackColor = false;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
-            this.btnDangKy.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnDangKy_KeyDown);
             // 
             // email
             // 
@@ -170,6 +195,8 @@
             this.email.TabIndex = 18;
             this.email.Text = "Email";
             this.email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.email.MouseClick += new System.Windows.Forms.MouseEventHandler(this.email_MouseClick);
+            this.email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.email_KeyDown);
             // 
             // nhaplaimatkhau
             // 
@@ -183,6 +210,8 @@
             this.nhaplaimatkhau.TabIndex = 17;
             this.nhaplaimatkhau.Text = "Nhập lại mật khẩu";
             this.nhaplaimatkhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nhaplaimatkhau.MouseClick += new System.Windows.Forms.MouseEventHandler(this.nhaplaimatkhau_MouseClick);
+            this.nhaplaimatkhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nhaplaimatkhau_KeyDown);
             // 
             // matkhau
             // 
@@ -196,6 +225,8 @@
             this.matkhau.TabIndex = 16;
             this.matkhau.Text = "Mật khẩu";
             this.matkhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.matkhau.MouseClick += new System.Windows.Forms.MouseEventHandler(this.matkhau_MouseClick);
+            this.matkhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.matkhau_KeyDown);
             // 
             // tendanhnhap
             // 
@@ -211,17 +242,8 @@
             this.tendanhnhap.TabIndex = 15;
             this.tendanhnhap.Text = "Tên đăng nhập";
             this.tendanhnhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(542, 605);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(66, 45);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
+            this.tendanhnhap.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tendanhnhap_MouseClick);
+            this.tendanhnhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tendanhnhap_KeyDown);
             // 
             // roundPictureBox4
             // 
@@ -247,8 +269,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.artanPanel1.ResumeLayout(false);
             this.artanPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -270,5 +292,6 @@
         private ArtanComponent.RoundPictureBox roundPictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private ArtanComponent.RoundPictureBox roundPictureBox4;
+        private System.Windows.Forms.Label lblError2;
     }
 }

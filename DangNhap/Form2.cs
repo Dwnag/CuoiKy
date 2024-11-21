@@ -19,6 +19,7 @@ namespace DangNhap
         public Form2()
         {
             InitializeComponent();
+            //enter
             tendanhnhap.Enter += tendanhnhap_Enter;
             tendanhnhap.Leave += tendanhnhap_Leave;
 
@@ -31,7 +32,12 @@ namespace DangNhap
             email.Enter += email_Enter;
             email.Leave += email_Leave;
 
-            btnDangKy.KeyDown += btnDangKy_KeyDown;
+            //keydown
+            tendanhnhap.KeyDown += tendanhnhap_KeyDown;
+            matkhau.KeyDown += matkhau_KeyDown;
+            nhaplaimatkhau.KeyDown += nhaplaimatkhau_KeyDown;
+            email.KeyDown += email_KeyDown;
+            //button
         }
 
         // Sự kiện khi nhấn vào textbox
@@ -103,19 +109,83 @@ namespace DangNhap
                 email.ForeColor = Color.Silver;
             }
         }
+        
+        //keydown
+        private void tendanhnhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                signIn();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
 
+        private void matkhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                signIn();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void nhaplaimatkhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                signIn();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void email_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+                signIn();
+            }
+        }
+        //MouseClick
+        private void tendanhnhap_MouseClick(object sender, MouseEventArgs e)
+        {
+            lblError2.Visible=false;
+        }
+
+        private void matkhau_MouseClick(object sender, MouseEventArgs e)
+        {
+            lblError2.Visible = false;
+        }
+
+        private void nhaplaimatkhau_MouseClick(object sender, MouseEventArgs e)
+        {
+            lblError2.Visible = false;
+        }
+
+        private void email_MouseClick(object sender, MouseEventArgs e)
+        {
+            lblError2.Visible = false;
+        }
         //Đăng Ký
         private void signIn()
         {
             // Kiểm tra xem người dùng đã nhập đầy đủ thông tin chưa
             if (tendanhnhap.Text == "Tên đăng nhập" || matkhau.Text == "Mật khẩu" || nhaplaimatkhau.Text == "Nhập lại mật khẩu" || email.Text == "Email" || tendanhnhap.Text == "Tên đăng nhập" || matkhau.Text == "Mật khẩu" || nhaplaimatkhau.Text == "Nhập lại mật khẩu" || email.Text == "Email")
             {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblError2.Text = "Vui lòng điền đầy đủ thông tin.";
+                lblError2.Visible = true;
+                //MessageBox.Show("Vui lòng điền đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (matkhau.Text != nhaplaimatkhau.Text)
             {
-                MessageBox.Show("Mật khẩu và nhập lại mật khẩu không khớp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblError2.Text = "Mật khẩu và nhập lại mật khẩu không khớp!.";
+                lblError2.Visible = true;
+                //MessageBox.Show("Mật khẩu và nhập lại mật khẩu không khớp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
@@ -123,10 +193,6 @@ namespace DangNhap
                 try
                 {
                     connet.Open();
-
-                    // Kiểm tra kết nối
-                    MessageBox.Show("Đã kết nối thành công.");
-
                     //thêm dữ liệu
                     string query = $"INSERT INTO ThongTinDangNhap (TaiKhoan, Matkhau, Email) VALUES ('{tendanhnhap.Text}', '{matkhau.Text}', '{email.Text}')";
 
@@ -172,16 +238,6 @@ namespace DangNhap
            signIn();
         }
 
-        private void btnDangKy_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                signIn();
-                e.Handled = true;
-                e.SuppressKeyPress = true;
-            }
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -191,5 +247,12 @@ namespace DangNhap
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Controls.Add(lblError2);
+        }
+
+        
     }
 }

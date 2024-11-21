@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.artanPanel1 = new ArtanComponent.ArtanPanel();
+            this.lblError = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Hienmatkhau = new System.Windows.Forms.CheckBox();
             this.Thoat = new System.Windows.Forms.LinkLabel();
@@ -65,6 +66,7 @@
             this.artanPanel1.BackColor = System.Drawing.Color.White;
             this.artanPanel1.BorderAngle = 90F;
             this.artanPanel1.BorderRadius = 40;
+            this.artanPanel1.Controls.Add(this.lblError);
             this.artanPanel1.Controls.Add(this.pictureBox2);
             this.artanPanel1.Controls.Add(this.Hienmatkhau);
             this.artanPanel1.Controls.Add(this.Thoat);
@@ -89,6 +91,19 @@
             this.artanPanel1.Size = new System.Drawing.Size(611, 653);
             this.artanPanel1.TabIndex = 0;
             this.artanPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.artanPanel1_Paint);
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(145, 387);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(61, 22);
+            this.lblError.TabIndex = 14;
+            this.lblError.Text = "label3";
+            this.lblError.Visible = false;
+            this.lblError.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox2
             // 
@@ -174,7 +189,7 @@
             this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(387, 399);
+            this.linkLabel1.Location = new System.Drawing.Point(403, 417);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(205, 32);
             this.linkLabel1.TabIndex = 7;
@@ -219,6 +234,7 @@
             this.matkhau.Size = new System.Drawing.Size(460, 35);
             this.matkhau.TabIndex = 5;
             this.matkhau.Text = "Mật khẩu";
+            this.matkhau.MouseClick += new System.Windows.Forms.MouseEventHandler(this.matkhau_MouseClick);
             this.matkhau.Enter += new System.EventHandler(this.matkhau_Enter);
             this.matkhau.Leave += new System.EventHandler(this.matkhau_Leave);
             this.matkhau.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.matkhau_PreviewKeyDown);
@@ -234,6 +250,7 @@
             this.taikhoan.Size = new System.Drawing.Size(452, 35);
             this.taikhoan.TabIndex = 4;
             this.taikhoan.Text = "Tên đăng nhập";
+            this.taikhoan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.taikhoan_MouseClick);
             this.taikhoan.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.taikhoan.Enter += new System.EventHandler(this.taikhoan_Enter);
             this.taikhoan.Leave += new System.EventHandler(this.taikhoan_Leave);
@@ -349,6 +366,7 @@
         private System.Windows.Forms.CheckBox Hienmatkhau;
         private System.Windows.Forms.PictureBox pictureBox2;
         private ArtanComponent.RoundPictureBox roundPictureBox4;
+        private System.Windows.Forms.Label lblError;
     }
 }
 

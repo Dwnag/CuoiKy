@@ -24,6 +24,8 @@ namespace DangNhap
             matkhau.KeyDown += matkhau_KeyDown;
             taikhoan.KeyDown += taiKhoan_KeyDown;
             matkhau.TextChanged += matkhau_TextChanged;
+            taikhoan.MouseClick += taikhoan_MouseClick;
+            matkhau.MouseClick += matkhau_MouseClick;
         }
 
         //Nhan tabs de xuong dong
@@ -33,6 +35,7 @@ namespace DangNhap
             {
                 e.Handled = true;
                 e.SuppressKeyPress = true;
+                lblError.Visible = false;
             }
         }
 
@@ -42,11 +45,20 @@ namespace DangNhap
             if (e.KeyCode == Keys.Enter)
             {
                 login();
-                e.Handled = true; 
-                e.SuppressKeyPress = true; 
+                e.Handled = true;
+                e.SuppressKeyPress = false;
             }
         }
 
+        private void taikhoan_MouseClick(object sender, MouseEventArgs e)
+        {
+            lblError.Visible = false;
+        }
+
+        private void matkhau_MouseClick(object sender, MouseEventArgs e)
+        {
+            lblError.Visible = false;
+        }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             login();
@@ -77,10 +89,13 @@ namespace DangNhap
                 {
                     if (taikhoan.Text == "Tên đăng nhập" || matkhau.Text == "Mật khẩu" || taikhoan.Text == "Tên đăng nhập" || matkhau.Text == "Mật khẩu")
                     {
-                        MessageBox.Show("Vui lòng điền đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        lblError.Text = "Vui lòng điền đầy đủ thông tin.";
+                        lblError.Visible = true;
                         return;
                     }
-                    MessageBox.Show("Thông tin đăng nhập không chính xác!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    lblError.Text = "Thông tin đăng nhập không chính xác!";
+                    lblError.Visible = true;
+
                     taikhoan.Clear();
                     matkhau.Clear();
 
@@ -238,7 +253,14 @@ namespace DangNhap
         {
             Form3 form3 = new Form3();
             form3.Show();
-            this.Close();
+            this.Hide();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Controls.Add(lblError);
+        }
+
+        
     }
 }

@@ -40,7 +40,16 @@ namespace DangNhap
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Form2 form2 = new Form2();
+            form2.Show();
+            this.Hide();
+        }
 
+        private void backToLogin_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide();
         }
     }
 }
