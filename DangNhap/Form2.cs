@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyApp.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,7 +42,7 @@ namespace DangNhap
             //khởi động giao diện tại vị trí xác định
             this.StartPosition = FormStartPosition.CenterScreen;
             //dừng chương trình khi nhấn x
-            FormEventHandler.exitProgram(this);
+            this.FormClosing += (sender, e) => FormCloseHandler.exitProgram(this, e);
         }
 
         // Sự kiện khi nhấn vào textbox

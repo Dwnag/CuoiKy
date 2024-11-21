@@ -13,6 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Data.SqlClient;
 using static System.Net.Mime.MediaTypeNames;
 using static DangNhap.EmailHelper;
+using MyApp.Utilities;
 
 namespace DangNhap
 {
@@ -21,13 +22,14 @@ namespace DangNhap
         public Form3()
         {
             InitializeComponent();
+            //khởi động chương trình ở 1 vị trí nhất định
             this.StartPosition = FormStartPosition.CenterScreen;
+            //dừng chương trình khi nhấn x
+            this.FormClosing += (sender, e) => FormCloseHandler.exitProgram(this, e);
         }
 
 
-        //gửi mail
-
-        
+        //gửi mail       
 
         private void btn_laylaimatkhau_Click(object sender, EventArgs e)
         {
@@ -36,8 +38,7 @@ namespace DangNhap
             string emailInput = textBox1.Text;    
             // Gọi phương thức phục hồi mật khẩu
             emailHelper.recoverPassword(emailInput, lblError3);
-            //dừng chương trình khi nhấn x
-            FormEventHandler.exitProgram(this);
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -91,7 +92,6 @@ namespace DangNhap
                 e.Handled = true;
                 e.SuppressKeyPress = true;
                 EmailHelper emailHelper = new EmailHelper();
-
                 string emailInput = textBox1.Text;
                 emailHelper.recoverPassword(emailInput, lblError3);
             }

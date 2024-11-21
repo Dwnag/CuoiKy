@@ -1,21 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DangNhap
+namespace MyApp.Utilities
 {
-    public static class FormEventHandler
+    public static class FormCloseHandler
     {
-        public static void exitProgram(Form form)
+        private static bool isMessageBoxShown = false;
+
+        public static void exitProgram(Form form, FormClosingEventArgs e)
         {
-            form.FormClosing += (sender, e) =>
+            if (!isMessageBoxShown)
             {
+                isMessageBoxShown = true;
+
                 DialogResult result = MessageBox.Show(
-                    "Bạn có chắc chắn muốn thoát chương trình?",
-                    "Xác nhận thoát",
+                    "Bạn muốn đóng phần mềm?",
+                    "Xác nhận đóng",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question
                 );
@@ -26,9 +26,9 @@ namespace DangNhap
                 }
                 else
                 {
-                    Application.Exit(); 
+                    Application.Exit();
                 }
-            };
+            }
         }
     }
 }
