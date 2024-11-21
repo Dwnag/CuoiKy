@@ -186,5 +186,10 @@ namespace DangNhap
         {
 
         }
+
+        private void artanPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

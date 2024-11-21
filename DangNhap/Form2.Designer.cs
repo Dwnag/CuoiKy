@@ -90,17 +90,18 @@
             this.artanPanel1.ForeColor = System.Drawing.Color.Black;
             this.artanPanel1.GradientBottomColor = System.Drawing.Color.White;
             this.artanPanel1.GradientTopColor = System.Drawing.Color.White;
-            this.artanPanel1.Location = new System.Drawing.Point(785, 128);
+            this.artanPanel1.Location = new System.Drawing.Point(785, 198);
             this.artanPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.artanPanel1.Name = "artanPanel1";
-            this.artanPanel1.Size = new System.Drawing.Size(611, 723);
+            this.artanPanel1.Size = new System.Drawing.Size(611, 653);
             this.artanPanel1.TabIndex = 2;
+            this.artanPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.artanPanel1_Paint);
             // 
             // roundPictureBox1
             // 
             this.roundPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roundPictureBox1.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_022205;
-            this.roundPictureBox1.Location = new System.Drawing.Point(244, 112);
+            this.roundPictureBox1.Location = new System.Drawing.Point(244, 77);
             this.roundPictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.roundPictureBox1.Name = "roundPictureBox1";
             this.roundPictureBox1.Size = new System.Drawing.Size(142, 132);
@@ -123,7 +124,7 @@
             this.linkLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Times New Roman", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(333, 596);
+            this.linkLabel2.Location = new System.Drawing.Point(333, 561);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(204, 32);
             this.linkLabel2.TabIndex = 21;
@@ -136,7 +137,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(115, 600);
+            this.label2.Location = new System.Drawing.Point(115, 565);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(212, 28);
             this.label2.TabIndex = 20;
@@ -147,7 +148,7 @@
             this.btnDangKy.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDangKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
             this.btnDangKy.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKy.Location = new System.Drawing.Point(196, 508);
+            this.btnDangKy.Location = new System.Drawing.Point(196, 473);
             this.btnDangKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(243, 67);
@@ -162,7 +163,7 @@
             this.email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.email.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email.ForeColor = System.Drawing.Color.Silver;
-            this.email.Location = new System.Drawing.Point(99, 447);
+            this.email.Location = new System.Drawing.Point(99, 412);
             this.email.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(452, 35);
@@ -175,7 +176,7 @@
             this.nhaplaimatkhau.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nhaplaimatkhau.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nhaplaimatkhau.ForeColor = System.Drawing.Color.Silver;
-            this.nhaplaimatkhau.Location = new System.Drawing.Point(99, 383);
+            this.nhaplaimatkhau.Location = new System.Drawing.Point(99, 348);
             this.nhaplaimatkhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nhaplaimatkhau.Name = "nhaplaimatkhau";
             this.nhaplaimatkhau.Size = new System.Drawing.Size(452, 35);
@@ -188,7 +189,7 @@
             this.matkhau.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.matkhau.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.matkhau.ForeColor = System.Drawing.Color.Silver;
-            this.matkhau.Location = new System.Drawing.Point(99, 320);
+            this.matkhau.Location = new System.Drawing.Point(99, 285);
             this.matkhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.matkhau.Name = "matkhau";
             this.matkhau.Size = new System.Drawing.Size(452, 35);
@@ -203,7 +204,7 @@
             "Ten"});
             this.tendanhnhap.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tendanhnhap.ForeColor = System.Drawing.Color.Silver;
-            this.tendanhnhap.Location = new System.Drawing.Point(99, 262);
+            this.tendanhnhap.Location = new System.Drawing.Point(99, 227);
             this.tendanhnhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tendanhnhap.Name = "tendanhnhap";
             this.tendanhnhap.Size = new System.Drawing.Size(452, 35);
@@ -215,7 +216,7 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(542, 675);
+            this.pictureBox2.Location = new System.Drawing.Point(542, 605);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(66, 45);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
