@@ -92,8 +92,17 @@ namespace DangNhap
             if (e.KeyCode == Keys.Enter)
             {
                 e.Handled = true;
-                e.SuppressKeyPress = false;
+                e.SuppressKeyPress = true;
+                EmailHelper emailHelper = new EmailHelper();
+
+                string emailInput = textBox1.Text;
+                emailHelper.recoverPassword(emailInput, lblError3);
             }
+        }
+
+        private void textBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            lblError3.Visible = false;
         }
     }
 }
