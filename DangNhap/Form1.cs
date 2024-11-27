@@ -17,7 +17,7 @@ namespace DangNhap
 {
     public partial class Form1 : Form
     {
-        private readonly SqlConnection connet = new SqlConnection(@"Data Source=D-LAP;Initial Catalog=ql1;Integrated Security=True");
+        private readonly SqlConnection connet = new SqlConnection(@"Data Source=localhost;Initial Catalog=ql1;Integrated Security=True");
         
         public Form1()
         {
@@ -41,6 +41,12 @@ namespace DangNhap
                 e.Handled = true;
                 e.SuppressKeyPress = true;
                 lblError.Visible = false;
+            }
+            if (e.KeyCode == Keys.Enter)
+            {
+                login();
+                e.Handled = true;
+                e.SuppressKeyPress = false;
             }
         }
 
@@ -86,7 +92,7 @@ namespace DangNhap
                     TenTaiKhoan = taikhoan.Text;
                     MatKhau = matkhau.Text;
 
-                    Menu menu = new Menu();
+                    Menu1 menu = new Menu1();
                     menu.Show();
                     this.Hide();
                 }
