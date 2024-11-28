@@ -8,7 +8,7 @@ namespace DangNhap
 {
     public class EmailHelper
     {
-        private readonly string connectionString = "Data Source=D-LAP;Initial Catalog=ql1;Integrated Security=True";
+        private readonly string connectionString = "Data Source=localhost;Initial Catalog=ql1;Integrated Security=True";
 
         // Gửi email cho người dùng
         public void sendPasswordEmail(string recipientEmail, string password, Label lblMessage)

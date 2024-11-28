@@ -15,7 +15,7 @@ namespace DangNhap
 {
     public partial class DangKy : Form
     {
-        private readonly SqlConnection connet = new SqlConnection(@"Data Source=D-LAP;Initial Catalog=ql1;Integrated Security=True");
+        private readonly SqlConnection connet = new SqlConnection(@"Data Source=localhost;Initial Catalog=ql1;Integrated Security=True");
         private bool isSignInInProgress = false;
         public DangKy()
         {

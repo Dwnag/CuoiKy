@@ -28,20 +28,5 @@ namespace DangNhap
             menu.Show();
             this.Hide();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void leTan_Load(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void LeTan_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

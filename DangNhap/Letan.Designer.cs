@@ -129,7 +129,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "LeTan";
             this.Text = "Letan";
-            this.Load += new System.EventHandler(this.LeTan_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
