@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyApp.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace DangNhap
         public LeTan()
         {
             InitializeComponent();
+            this.FormClosing += (sender, e) => FormCloseHandler.exitProgram(this, e);
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.show();
+            this.Hide();
         }
     }
 }

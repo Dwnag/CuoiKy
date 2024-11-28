@@ -44,5 +44,12 @@ namespace DangNhap
         {
 
         }
+
+        private void roundPictureBox8_Click(object sender, EventArgs e)
+        {
+            LeTan lt = new LeTan();
+            lt.Show();
+            this.Hide();
+        }
     }
 }

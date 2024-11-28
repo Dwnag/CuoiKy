@@ -40,26 +40,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.roundPictureBox5 = new ArtanComponent.RoundPictureBox();
-            this.roundPictureBox6 = new ArtanComponent.RoundPictureBox();
-            this.roundPictureBox7 = new ArtanComponent.RoundPictureBox();
-            this.roundPictureBox8 = new ArtanComponent.RoundPictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.roundPictureBox10 = new ArtanComponent.RoundPictureBox();
             this.dangxuat = new System.Windows.Forms.Button();
             this.thongke = new System.Windows.Forms.Button();
             this.quanly = new System.Windows.Forms.Button();
             this.menu = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.roundPictureBox4 = new ArtanComponent.RoundPictureBox();
-            this.roundPictureBox3 = new ArtanComponent.RoundPictureBox();
-            this.roundPictureBox2 = new ArtanComponent.RoundPictureBox();
-            this.roundPictureBox1 = new ArtanComponent.RoundPictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,21 +60,30 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.roundPictureBox5 = new ArtanComponent.RoundPictureBox();
+            this.roundPictureBox6 = new ArtanComponent.RoundPictureBox();
+            this.roundPictureBox7 = new ArtanComponent.RoundPictureBox();
+            this.roundPictureBox8 = new ArtanComponent.RoundPictureBox();
+            this.roundPictureBox10 = new ArtanComponent.RoundPictureBox();
+            this.roundPictureBox4 = new ArtanComponent.RoundPictureBox();
+            this.roundPictureBox3 = new ArtanComponent.RoundPictureBox();
+            this.roundPictureBox2 = new ArtanComponent.RoundPictureBox();
+            this.roundPictureBox1 = new ArtanComponent.RoundPictureBox();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox8)).BeginInit();
-            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -108,7 +108,7 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(984, 72);
+            this.menuStrip1.Size = new System.Drawing.Size(984, 74);
             this.menuStrip1.TabIndex = 32;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -196,46 +196,6 @@
             this.panel8.Size = new System.Drawing.Size(220, 674);
             this.panel8.TabIndex = 39;
             // 
-            // roundPictureBox5
-            // 
-            this.roundPictureBox5.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_040125;
-            this.roundPictureBox5.Location = new System.Drawing.Point(825, 503);
-            this.roundPictureBox5.Name = "roundPictureBox5";
-            this.roundPictureBox5.Size = new System.Drawing.Size(178, 179);
-            this.roundPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox5.TabIndex = 36;
-            this.roundPictureBox5.TabStop = false;
-            // 
-            // roundPictureBox6
-            // 
-            this.roundPictureBox6.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034310;
-            this.roundPictureBox6.Location = new System.Drawing.Point(362, 503);
-            this.roundPictureBox6.Name = "roundPictureBox6";
-            this.roundPictureBox6.Size = new System.Drawing.Size(178, 179);
-            this.roundPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox6.TabIndex = 35;
-            this.roundPictureBox6.TabStop = false;
-            // 
-            // roundPictureBox7
-            // 
-            this.roundPictureBox7.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034253;
-            this.roundPictureBox7.Location = new System.Drawing.Point(825, 187);
-            this.roundPictureBox7.Name = "roundPictureBox7";
-            this.roundPictureBox7.Size = new System.Drawing.Size(178, 179);
-            this.roundPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox7.TabIndex = 34;
-            this.roundPictureBox7.TabStop = false;
-            // 
-            // roundPictureBox8
-            // 
-            this.roundPictureBox8.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034228;
-            this.roundPictureBox8.Location = new System.Drawing.Point(362, 187);
-            this.roundPictureBox8.Name = "roundPictureBox8";
-            this.roundPictureBox8.Size = new System.Drawing.Size(178, 179);
-            this.roundPictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox8.TabIndex = 33;
-            this.roundPictureBox8.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -298,16 +258,6 @@
             this.panel6.Size = new System.Drawing.Size(217, 677);
             this.panel6.TabIndex = 39;
             // 
-            // roundPictureBox10
-            // 
-            this.roundPictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("roundPictureBox10.Image")));
-            this.roundPictureBox10.Location = new System.Drawing.Point(46, 5);
-            this.roundPictureBox10.Name = "roundPictureBox10";
-            this.roundPictureBox10.Size = new System.Drawing.Size(115, 92);
-            this.roundPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox10.TabIndex = 40;
-            this.roundPictureBox10.TabStop = false;
-            // 
             // dangxuat
             // 
             this.dangxuat.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -358,46 +308,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(224, 670);
             this.panel1.TabIndex = 37;
-            // 
-            // roundPictureBox4
-            // 
-            this.roundPictureBox4.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_040125;
-            this.roundPictureBox4.Location = new System.Drawing.Point(825, 503);
-            this.roundPictureBox4.Name = "roundPictureBox4";
-            this.roundPictureBox4.Size = new System.Drawing.Size(178, 179);
-            this.roundPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox4.TabIndex = 36;
-            this.roundPictureBox4.TabStop = false;
-            // 
-            // roundPictureBox3
-            // 
-            this.roundPictureBox3.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034310;
-            this.roundPictureBox3.Location = new System.Drawing.Point(327, 503);
-            this.roundPictureBox3.Name = "roundPictureBox3";
-            this.roundPictureBox3.Size = new System.Drawing.Size(178, 179);
-            this.roundPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox3.TabIndex = 35;
-            this.roundPictureBox3.TabStop = false;
-            // 
-            // roundPictureBox2
-            // 
-            this.roundPictureBox2.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034253;
-            this.roundPictureBox2.Location = new System.Drawing.Point(825, 187);
-            this.roundPictureBox2.Name = "roundPictureBox2";
-            this.roundPictureBox2.Size = new System.Drawing.Size(178, 179);
-            this.roundPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox2.TabIndex = 34;
-            this.roundPictureBox2.TabStop = false;
-            // 
-            // roundPictureBox1
-            // 
-            this.roundPictureBox1.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034228;
-            this.roundPictureBox1.Location = new System.Drawing.Point(327, 187);
-            this.roundPictureBox1.Name = "roundPictureBox1";
-            this.roundPictureBox1.Size = new System.Drawing.Size(178, 179);
-            this.roundPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox1.TabIndex = 33;
-            this.roundPictureBox1.TabStop = false;
             // 
             // label6
             // 
@@ -482,6 +392,97 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // roundPictureBox5
+            // 
+            this.roundPictureBox5.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_040125;
+            this.roundPictureBox5.Location = new System.Drawing.Point(825, 503);
+            this.roundPictureBox5.Name = "roundPictureBox5";
+            this.roundPictureBox5.Size = new System.Drawing.Size(178, 179);
+            this.roundPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox5.TabIndex = 36;
+            this.roundPictureBox5.TabStop = false;
+            // 
+            // roundPictureBox6
+            // 
+            this.roundPictureBox6.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034310;
+            this.roundPictureBox6.Location = new System.Drawing.Point(362, 503);
+            this.roundPictureBox6.Name = "roundPictureBox6";
+            this.roundPictureBox6.Size = new System.Drawing.Size(178, 179);
+            this.roundPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox6.TabIndex = 35;
+            this.roundPictureBox6.TabStop = false;
+            // 
+            // roundPictureBox7
+            // 
+            this.roundPictureBox7.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034253;
+            this.roundPictureBox7.Location = new System.Drawing.Point(825, 187);
+            this.roundPictureBox7.Name = "roundPictureBox7";
+            this.roundPictureBox7.Size = new System.Drawing.Size(178, 179);
+            this.roundPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox7.TabIndex = 34;
+            this.roundPictureBox7.TabStop = false;
+            // 
+            // roundPictureBox8
+            // 
+            this.roundPictureBox8.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034228;
+            this.roundPictureBox8.Location = new System.Drawing.Point(362, 187);
+            this.roundPictureBox8.Name = "roundPictureBox8";
+            this.roundPictureBox8.Size = new System.Drawing.Size(178, 179);
+            this.roundPictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox8.TabIndex = 33;
+            this.roundPictureBox8.TabStop = false;
+            this.roundPictureBox8.Click += new System.EventHandler(this.roundPictureBox8_Click);
+            // 
+            // roundPictureBox10
+            // 
+            this.roundPictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("roundPictureBox10.Image")));
+            this.roundPictureBox10.Location = new System.Drawing.Point(46, 5);
+            this.roundPictureBox10.Name = "roundPictureBox10";
+            this.roundPictureBox10.Size = new System.Drawing.Size(115, 92);
+            this.roundPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox10.TabIndex = 40;
+            this.roundPictureBox10.TabStop = false;
+            // 
+            // roundPictureBox4
+            // 
+            this.roundPictureBox4.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_040125;
+            this.roundPictureBox4.Location = new System.Drawing.Point(825, 503);
+            this.roundPictureBox4.Name = "roundPictureBox4";
+            this.roundPictureBox4.Size = new System.Drawing.Size(178, 179);
+            this.roundPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox4.TabIndex = 36;
+            this.roundPictureBox4.TabStop = false;
+            // 
+            // roundPictureBox3
+            // 
+            this.roundPictureBox3.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034310;
+            this.roundPictureBox3.Location = new System.Drawing.Point(327, 503);
+            this.roundPictureBox3.Name = "roundPictureBox3";
+            this.roundPictureBox3.Size = new System.Drawing.Size(178, 179);
+            this.roundPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox3.TabIndex = 35;
+            this.roundPictureBox3.TabStop = false;
+            // 
+            // roundPictureBox2
+            // 
+            this.roundPictureBox2.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034253;
+            this.roundPictureBox2.Location = new System.Drawing.Point(825, 187);
+            this.roundPictureBox2.Name = "roundPictureBox2";
+            this.roundPictureBox2.Size = new System.Drawing.Size(178, 179);
+            this.roundPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox2.TabIndex = 34;
+            this.roundPictureBox2.TabStop = false;
+            // 
+            // roundPictureBox1
+            // 
+            this.roundPictureBox1.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034228;
+            this.roundPictureBox1.Location = new System.Drawing.Point(327, 187);
+            this.roundPictureBox1.Name = "roundPictureBox1";
+            this.roundPictureBox1.Size = new System.Drawing.Size(178, 179);
+            this.roundPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox1.TabIndex = 33;
+            this.roundPictureBox1.TabStop = false;
+            // 
             // Menu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -500,17 +501,17 @@
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox8)).EndInit();
-            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
