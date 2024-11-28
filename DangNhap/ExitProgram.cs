@@ -33,6 +33,7 @@ namespace MyApp.Utilities
                 {
                     Application.Exit();
                 }
+                isMessageBoxShown = false;
             }
         }
     }

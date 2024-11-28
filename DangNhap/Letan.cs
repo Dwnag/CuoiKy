@@ -16,14 +16,32 @@ namespace DangNhap
         public LeTan()
         {
             InitializeComponent();
+            //dừng chương trình khi nhấn x
             this.FormClosing += (sender, e) => FormCloseHandler.exitProgram(this, e);
+            //chạy chương trình ở cùng 1 vị trí
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
-            menu.show();
+            Menu1 menu = new Menu1();
+            menu.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void leTan_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void LeTan_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

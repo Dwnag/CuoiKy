@@ -33,7 +33,6 @@
             this.lblError = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Hienmatkhau = new System.Windows.Forms.CheckBox();
-            this.Thoat = new System.Windows.Forms.LinkLabel();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
@@ -69,7 +68,6 @@
             this.artanPanel1.Controls.Add(this.lblError);
             this.artanPanel1.Controls.Add(this.pictureBox2);
             this.artanPanel1.Controls.Add(this.Hienmatkhau);
-            this.artanPanel1.Controls.Add(this.Thoat);
             this.artanPanel1.Controls.Add(this.btnDangNhap);
             this.artanPanel1.Controls.Add(this.label2);
             this.artanPanel1.Controls.Add(this.linkLabel2);
@@ -96,11 +94,11 @@
             // 
             this.lblError.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(145, 387);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(61, 22);
+            this.lblError.Size = new System.Drawing.Size(60, 22);
             this.lblError.TabIndex = 14;
             this.lblError.Text = "label3";
             this.lblError.Visible = false;
@@ -131,20 +129,6 @@
             this.Hienmatkhau.Text = "Hiện mật khẩu";
             this.Hienmatkhau.UseVisualStyleBackColor = true;
             this.Hienmatkhau.CheckedChanged += new System.EventHandler(this.hienmatkhau_CheckedChanged);
-            // 
-            // Thoat
-            // 
-            this.Thoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Thoat.AutoSize = true;
-            this.Thoat.Font = new System.Drawing.Font("Times New Roman", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Thoat.LinkColor = System.Drawing.Color.Red;
-            this.Thoat.Location = new System.Drawing.Point(316, 605);
-            this.Thoat.Name = "Thoat";
-            this.Thoat.Size = new System.Drawing.Size(94, 36);
-            this.Thoat.TabIndex = 11;
-            this.Thoat.TabStop = true;
-            this.Thoat.Text = "Thoát";
-            this.Thoat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // btnDangNhap
             // 
@@ -323,7 +307,7 @@
             this.roundPictureBox4.TabIndex = 2;
             this.roundPictureBox4.TabStop = false;
             // 
-            // Form1
+            // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -334,7 +318,7 @@
             this.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.Location = new System.Drawing.Point(100, 100);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form1";
+            this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             this.Load += new System.EventHandler(this.form1_Load);
@@ -363,7 +347,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel Thoat;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox Hienmatkhau;

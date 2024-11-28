@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
+using System.Text.RegularExpressions;
 namespace DangNhap
 {
     public partial class DangKy : Form
@@ -43,8 +43,8 @@ namespace DangNhap
             this.FormClosing += (sender, e) => FormCloseHandler.exitProgram(this, e);
         }
 
-        // Sự kiện khi nhấn vào textbox
-        private void tendanhnhap_Enter(object sender, EventArgs e)
+    // Sự kiện khi nhấn vào textbox
+    private void tendanhnhap_Enter(object sender, EventArgs e)
         {
             if (tendanhnhap.Text == "Tên đăng nhập")
             {
@@ -144,6 +144,17 @@ namespace DangNhap
         {
             lblError2.Visible = false;
         }
+
+        private bool isValidEmail(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                return false;
+
+            string pattern = @"^[a-zA-Z0-9._%+-]+@gmail\.com$"; // Kiểm tra chỉ email Gmail
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(email);
+        }
+
         //Đăng Ký
         private void signIn()
         {
@@ -160,6 +171,11 @@ namespace DangNhap
                 lblError2.Text = "Mật khẩu và nhập lại mật khẩu không khớp!.";
                 lblError2.Visible = true;
                 //MessageBox.Show("Mật khẩu và nhập lại mật khẩu không khớp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if ( isValidEmail(email.Text) == false ){
+                lblError2.Text = "Vui lòng nhập email theo đúng định dạng.";
+                lblError2.Visible = true;
                 return;
             }
             else
