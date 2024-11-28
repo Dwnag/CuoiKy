@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyApp.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,8 @@ namespace DangNhap
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            //dừng chương trình khi nhấn x
+            this.FormClosing += (sender, e) => FormCloseHandler.exitProgram(this, e);
         }
 
         private void quanly_Click(object sender, EventArgs e)
@@ -40,7 +43,7 @@ namespace DangNhap
 
         }
 
-        private void Menu1_Load(object sender, EventArgs e)
+        private void menu1_Load(object sender, EventArgs e)
         {
 
         }

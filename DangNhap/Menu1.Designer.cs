@@ -492,7 +492,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "Menu1";
             this.Text = "Menu";
-            this.Load += new System.EventHandler(this.Menu1_Load);
+            this.Load += new System.EventHandler(this.menu1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
