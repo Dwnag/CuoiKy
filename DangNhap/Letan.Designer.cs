@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LeTan));
             this.panel1 = new System.Windows.Forms.Panel();
             this.exit = new System.Windows.Forms.Button();
+            this.Logo = new ArtanComponent.RoundPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.Logo = new ArtanComponent.RoundPictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.roundPictureBox1 = new ArtanComponent.RoundPictureBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,16 @@
             this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
+            // Logo
+            // 
+            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
+            this.Logo.Location = new System.Drawing.Point(39, 22);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(115, 92);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo.TabIndex = 41;
+            this.Logo.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(160)))), ((int)(((byte)(210)))));
@@ -88,16 +98,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Lễ Tân";
             // 
-            // Logo
-            // 
-            this.Logo.Image = ((System.Drawing.Image)(resources.GetObject("Logo.Image")));
-            this.Logo.Location = new System.Drawing.Point(39, 22);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(115, 92);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Logo.TabIndex = 41;
-            this.Logo.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.roundPictureBox1);
@@ -114,8 +114,8 @@
             this.roundPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("roundPictureBox1.Image")));
             this.roundPictureBox1.Location = new System.Drawing.Point(185, 102);
             this.roundPictureBox1.Name = "roundPictureBox1";
-            this.roundPictureBox1.Size = new System.Drawing.Size(317, 282);
-            this.roundPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox1.Size = new System.Drawing.Size(236, 199);
+            this.roundPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.roundPictureBox1.TabIndex = 0;
             this.roundPictureBox1.TabStop = false;
             // 
@@ -130,9 +130,9 @@
             this.Name = "LeTan";
             this.Text = "Letan";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -32,8 +32,6 @@ namespace DangNhap
             matkhau.TextChanged += matkhau_TextChanged;
             taikhoan.MouseClick += taikhoan_MouseClick;
             matkhau.MouseClick += matkhau_MouseClick;
-            //khởi động giao diện tại vị trí xác định
-            this.StartPosition = FormStartPosition.CenterScreen;
             //dừng chương trình khi nhấn x
             this.FormClosing += (sender, e) => FormCloseHandler.exitProgram(this, e);
         }

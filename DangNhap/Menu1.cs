@@ -20,7 +20,6 @@ namespace DangNhap
             //dừng chương trình khi nhấn x
             this.FormClosing += (sender, e) => FormCloseHandler.exitProgram(this, e);
         }
-
         private void quanly_Click(object sender, EventArgs e)
         {
 
@@ -52,6 +51,18 @@ namespace DangNhap
         {
             LeTan lt = new LeTan();
             lt.Show();
+            this.Hide();
+        }
+
+        private void menu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundPictureBox6_Click(object sender, EventArgs e)
+        {
+            NhanVienKho nvk = new NhanVienKho();
+            nvk.Show();
             this.Hide();
         }
     }
