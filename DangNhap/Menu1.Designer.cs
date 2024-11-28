@@ -39,6 +39,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.roundPictureBox5 = new ArtanComponent.RoundPictureBox();
             this.roundPictureBox6 = new ArtanComponent.RoundPictureBox();
             this.roundPictureBox7 = new ArtanComponent.RoundPictureBox();
@@ -48,6 +49,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.roundPictureBox10 = new ArtanComponent.RoundPictureBox();
             this.dangxuat = new System.Windows.Forms.Button();
             this.thongke = new System.Windows.Forms.Button();
             this.quanly = new System.Windows.Forms.Button();
@@ -66,9 +69,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.roundPictureBox10 = new ArtanComponent.RoundPictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -78,12 +78,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox8)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -187,6 +187,15 @@
             this.panel5.TabIndex = 39;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 106);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(220, 674);
+            this.panel8.TabIndex = 39;
+            // 
             // roundPictureBox5
             // 
             this.roundPictureBox5.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_040125;
@@ -280,6 +289,24 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1183, 106);
             this.panel7.TabIndex = 38;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel6.Location = new System.Drawing.Point(0, 103);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(217, 677);
+            this.panel6.TabIndex = 39;
+            // 
+            // roundPictureBox10
+            // 
+            this.roundPictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("roundPictureBox10.Image")));
+            this.roundPictureBox10.Location = new System.Drawing.Point(46, 5);
+            this.roundPictureBox10.Name = "roundPictureBox10";
+            this.roundPictureBox10.Size = new System.Drawing.Size(115, 92);
+            this.roundPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox10.TabIndex = 40;
+            this.roundPictureBox10.TabStop = false;
             // 
             // dangxuat
             // 
@@ -455,33 +482,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // roundPictureBox10
-            // 
-            this.roundPictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("roundPictureBox10.Image")));
-            this.roundPictureBox10.Location = new System.Drawing.Point(46, 5);
-            this.roundPictureBox10.Name = "roundPictureBox10";
-            this.roundPictureBox10.Size = new System.Drawing.Size(115, 92);
-            this.roundPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox10.TabIndex = 40;
-            this.roundPictureBox10.TabStop = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel6.Location = new System.Drawing.Point(0, 103);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(217, 677);
-            this.panel6.TabIndex = 39;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(0, 106);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(220, 674);
-            this.panel8.TabIndex = 39;
-            // 
             // Menu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -490,7 +490,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Name = "Menu1";
-            this.Text = "Form4";
+            this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -504,12 +505,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox8)).EndInit();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox10)).EndInit();
             this.ResumeLayout(false);
 
         }

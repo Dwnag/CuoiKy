@@ -17,9 +17,9 @@ using MyApp.Utilities;
 
 namespace DangNhap
 {
-    public partial class Form3 : Form
+    public partial class QuenMatKhau : Form
     {
-        public Form3()
+        public QuenMatKhau()
         {
             InitializeComponent();
             //khởi động chương trình ở 1 vị trí nhất định
@@ -63,14 +63,14 @@ namespace DangNhap
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form2 form2 = new Form2();
+            DangKy form2 = new DangKy();
             form2.Show();
             this.Hide();
         }
 
         private void backToLogin_Click(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
+            DangNhap f1 = new DangNhap();
             f1.Show();
             this.Hide();
         }

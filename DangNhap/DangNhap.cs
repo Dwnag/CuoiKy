@@ -15,13 +15,18 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace DangNhap
 {
-    public partial class Form1 : Form
+    public partial class DangNhap : Form
     {
         private readonly SqlConnection connet = new SqlConnection(@"Data Source=localhost;Initial Catalog=ql1;Integrated Security=True");
         
-        public Form1()
+        public DangNhap()
         {
             InitializeComponent();
+            // Giữ  nút Close, tắt nút Maximize và Minimize
+            this.MaximizeBox = false;  
+            this.MinimizeBox = false;  
+            this.ControlBox = true;   
+
             matkhau.KeyDown += matkhau_KeyDown;
             taikhoan.KeyDown += taiKhoan_KeyDown;
             matkhau.TextChanged += matkhau_TextChanged;
@@ -181,7 +186,7 @@ namespace DangNhap
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form2 form2 = new Form2();
+            DangKy form2 = new DangKy();
             form2.Show();
             this.Hide();
         }
@@ -297,7 +302,7 @@ namespace DangNhap
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form3 form3 = new Form3();
+            QuenMatKhau form3 = new QuenMatKhau();
             form3.Show();
             this.Hide();
         }

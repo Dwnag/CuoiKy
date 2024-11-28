@@ -13,11 +13,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DangNhap
 {
-    public partial class Form2 : Form
+    public partial class DangKy : Form
     {
         private readonly SqlConnection connet = new SqlConnection(@"Data Source=D-LAP;Initial Catalog=ql1;Integrated Security=True");
         private bool isSignInInProgress = false;
-        public Form2()
+        public DangKy()
         {
             InitializeComponent();
             //enter
@@ -199,7 +199,7 @@ namespace DangNhap
         //Trở lại giao diện đăng nhập
         private void backToLogin()
         {
-            Form1 form1 = new Form1();
+            DangNhap form1 = new DangNhap();
             form1.Show();
             this.Hide();
         }

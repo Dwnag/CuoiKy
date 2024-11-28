@@ -26,13 +26,21 @@ namespace DangNhap
         private void dangxuat_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Bạn có muốn đăng xuất", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            Form1 f1 = new Form1();
-            f1.Show();
-            this.Hide();
+            if (res == DialogResult.Yes)
+            {
+                DangNhap f1 = new DangNhap();
+                f1.Show();
+                this.Hide();
+            }
             
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Menu1_Load(object sender, EventArgs e)
         {
 
         }
