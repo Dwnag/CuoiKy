@@ -188,7 +188,7 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.ceLearningTextbox1);
+            //this.panel4.Controls.Add(this.ceLearningTextbox1);
             this.panel4.Location = new System.Drawing.Point(314, 50);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(488, 34);
@@ -196,17 +196,17 @@
             // 
             // ceLearningTextbox1
             // 
-            this.ceLearningTextbox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            |System.Windows.Forms.AnchorStyles.Right)));
-            this.ceLearningTextbox1.BackColor = System.Drawing.Color.Transparent;
-            this.ceLearningTextbox1.Br = System.Drawing.Color.White;
-            this.ceLearningTextbox1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.ceLearningTextbox1.ForeColor = System.Drawing.Color.Black;
-            this.ceLearningTextbox1.Location = new System.Drawing.Point(3, 3);
-            this.ceLearningTextbox1.Name = "ceLearningTextbox1";
-            this.ceLearningTextbox1.Size = new System.Drawing.Size(482, 31);
-            this.ceLearningTextbox1.TabIndex = 0;
-            this.ceLearningTextbox1.Text = "ceLearningTextbox1";
+            //this.ceLearningTextbox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            //|System.Windows.Forms.AnchorStyles.Right)));
+            //this.ceLearningTextbox1.BackColor = System.Drawing.Color.Transparent;
+            //this.ceLearningTextbox1.Br = System.Drawing.Color.White;
+            //this.ceLearningTextbox1.Font = new System.Drawing.Font("Century Gothic", 12F);
+            //this.ceLearningTextbox1.ForeColor = System.Drawing.Color.Black;
+            //this.ceLearningTextbox1.Location = new System.Drawing.Point(3, 3);
+            //this.ceLearningTextbox1.Name = "ceLearningTextbox1";
+            //this.ceLearningTextbox1.Size = new System.Drawing.Size(482, 31);
+            //this.ceLearningTextbox1.TabIndex = 0;
+            //this.ceLearningTextbox1.Text = "ceLearningTextbox1";
             // 
             // NhapXuatVatTu
             // 

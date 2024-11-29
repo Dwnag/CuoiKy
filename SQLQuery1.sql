@@ -186,6 +186,8 @@ BEGIN
 END;
 GO
 
+drop table Vat_lieu
+
 CREATE TABLE VatLieu (
     MaVatLieu NVARCHAR(50) PRIMARY KEY,
     TenVatLieu NVARCHAR(50) NOT NULL,
@@ -199,20 +201,7 @@ CREATE TABLE VatLieu (
     HanSuDung DATE                 -- Han su dung
 );
 
--- Bang cho Thuoc
-CREATE TABLE Thuoc (
-    MaThuoc NVARCHAR(50) PRIMARY KEY,
-    TenThuoc NVARCHAR(50) NOT NULL,    -- Ten thuoc
-    DVT NVARCHAR(20),                  -- Don vi tinh
-    SoLuong INT,                       -- So luong
-    GiaBan DECIMAL(18, 2),             -- Gia ban
-    HamLuong NVARCHAR(50),             -- Ham luong
-    GhiChu NVARCHAR(255),              -- Ghi chu
-    LoaiThuoc NVARCHAR(50),            -- Loai thuoc (Khang viem, Khang sinh, Giam dau)
-    HanSuDung DATE                     -- Han su dung
-);
 
-GO
 CREATE FUNCTION GenerateMaVatLieu()
 RETURNS NVARCHAR(50)
 AS
@@ -252,9 +241,9 @@ END;
 GO
 
 INSERT INTO VatLieu (MaVatLieu, TenVatLieu, MauSac, KichCo, DVT, TriGia, SoLuong, GhiChu, LoaiVatLieu, HanSuDung)
-VALUES (dbo.GenerateMaVatLieu(), N'Mũi Cạo vôi', NULL, NULL, N'Cái', 15000.00, 100, NULL, N'Vật liệu cố định', '2024-12-31');
+VALUES (GenerateMaVatLieu(), N'Mũi Cạo vôi', NULL, NULL, N'Cái', 15000.00, 100, NULL, N'Vật liệu cố định', '2024-12-31');
 
 INSERT INTO Thuoc (MaThuoc, TenThuoc, DVT, SoLuong, GiaBan, HamLuong, GhiChu, LoaiThuoc, HanSuDung)
-VALUES (dbo.GenerateMaThuoc(), N'Amoxicillin', N'Lọ', 30, 100000.00, '500mg', NULL, N'Kháng sinh', '2026-12-15');
+VALUES (GenerateMaThuoc(), N'Amoxicillin', N'Lọ', 30, 100000.00, '500mg', NULL, N'Kháng sinh', '2026-12-15');
 
 SELECT * FROM VatLieu;

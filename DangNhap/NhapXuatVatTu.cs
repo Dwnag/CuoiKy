@@ -8,7 +8,7 @@ namespace DangNhap
 {
     public partial class NhapXuatVatTu : Form
     {
-        private string connectionString = "Data Source=localhost;Initial Catalog=ql1;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        private string connectionString = "Data Source=D-Lap;Initial Catalog=ql1;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         public NhapXuatVatTu()
         {
@@ -23,7 +23,7 @@ namespace DangNhap
                 connection.Open();
 
                 // Load dữ liệu cho bảng Vật liệu
-                SqlDataAdapter vatTuAdapter = new SqlDataAdapter("SELECT * FROM VatLieu", connection);
+                SqlDataAdapter vatTuAdapter = new SqlDataAdapter("SELECT * FROM Vat_lieu", connection);
                 DataTable vatTuTable = new DataTable();
                 vatTuAdapter.Fill(vatTuTable);
                 dataGridView_VatTuDungCu.DataSource = vatTuTable;
