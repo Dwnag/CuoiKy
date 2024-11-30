@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -134,6 +135,12 @@
     <Compile Include="UIhelper.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="XemBenhAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemBenhAn.Designer.cs">
+      <DependentUpon>XemBenhAn.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Bacsi.resx">
       <DependentUpon>Bacsi.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIhelper.resx">
       <DependentUpon>UIhelper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemBenhAn.resx">
+      <DependentUpon>XemBenhAn.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
