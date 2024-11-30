@@ -98,12 +98,12 @@ namespace DangNhap
             textbox.Text = this.Text;
         }
 
-        public void SelectAll()
+        public void selectAll()
         {
             textbox.SelectAll();
         }
 
-        public Color Br
+        public Color cBr
         {
             get => this.br;
             set

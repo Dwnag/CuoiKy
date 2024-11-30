@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace DangNhap
 {
-    internal class backToMenu
+    internal class BackToMenu
     {
         public static void back(Form currentForm)
         {

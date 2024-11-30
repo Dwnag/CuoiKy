@@ -112,12 +112,12 @@ namespace DangNhap
             string sdt = sdttxt.Text.Trim();
             string diaChi = diachitxt.Text.Trim();
             string gmail = gmailtxt.Text.Trim();
-            string maKham = maKham.Text.Trim();
+            string maKham = Makham.Text.Trim();
             string chuanDoan = chuandoantxt.Text.Trim();
-            DateTime ngayHen = DateTime.Parse(ngayHen.Text.Trim());
+            DateTime ngayHen = DateTime.Parse(Ngayhen.Text.Trim());
             string dichVu = dichvutxt.Text.Trim();
             string khungGio = khunggio.Text.Trim();
-            string bacSi = bacSi.SelectedItem?.ToString() ?? string.Empty;
+            string bacSi = Bacsi.SelectedItem?.ToString() ?? string.Empty;
 
             // Kiểm tra dữ liệu trước khi lưu
             if (string.IsNullOrEmpty(ho) || string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(gioiTinh) ||
@@ -162,7 +162,7 @@ namespace DangNhap
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Thêm hồ sơ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            ClearInputs(); // Xóa trắng các trường sau khi thêm
+                            clearInputs(); // Xóa trắng các trường sau khi thêm
                         }
                         else
                         {
@@ -175,24 +175,6 @@ namespace DangNhap
             {
                 MessageBox.Show($"Lỗi khi thêm hồ sơ: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void ClearInputs()
-        {
-            txtHo.Clear();
-            txtTen.Clear();
-            dtpNgaySinh.Value = DateTime.Now;
-            rbtnNam.Checked = false;
-            rbtnNu.Checked = false;
-            txtSDT.Clear();
-            txtDiaChi.Clear();
-            txtGmail.Clear();
-            txtMaKham.Clear();
-            txtChuanDoan.Clear();
-            txtNgayHen.Clear();
-            txtDichVu.Clear();
-            txtKhungGio.Clear();
-            if (listBox1.Items.Count > 0) listBox1.SelectedIndex = -1;
         }
     }
 }
