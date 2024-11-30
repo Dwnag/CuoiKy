@@ -65,5 +65,19 @@ namespace DangNhap
             nvk.Show();
             this.Hide();
         }
+
+        private void btnNhapXuatVatTu_Click(object sender, EventArgs e)
+        {
+            LeTan leTan = new LeTan();
+            leTan.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            NhanVienKho nvk = new NhanVienKho();
+            nvk.Show();
+            this.Hide();
+        }
     }
 }

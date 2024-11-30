@@ -8,7 +8,7 @@ namespace DangNhap
 {
     public partial class Nhap : Form
     {
-        private string connectionString = "Data Source=LAPTOP-B36E7179\\SQLEXPRESS;Initial Catalog=qlpk;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        private string connectionString = "Data Source=localhost;Initial Catalog=ql1;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         public Nhap()
         {

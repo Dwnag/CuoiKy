@@ -121,7 +121,7 @@
   <data name="btnNhapXuatVatTu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAKQ1JREFUeF7tnQd4FGUTxxWkd6QJIkWa0qu0UEJXauiR3kkghEDovQjSEVSaRHoR
+        EAAACxABrSO9dQAAKQ1JREFUeF7tnQd4FGUTxxWkd6QJIkWa0qu0UEJXauiR3kkghEDovQjSEVSaRHoR
         BRQQsaCAFCliF0VR+BSwAXYFnG/+6+1l93b2SLkEA/N/nt8jJpu72X3f2bfP3KFSqVQqlUqlUqlUKpVK
         pVKpVCqVSqVSqVQqlUqlUqlUKpVKpVKpVCqVSqVSqVQqlUqlUqlUKpVKpVKpVCqVSpUyVJAp/B8nC6NS
         3RRtZ+g/zhZGpbopUgdRqfxIHUSl8iN1EJXKj9RBVCo/Eh3kkZwFqUe+Yu7kZ0oXoR5lCweMh+/P77DD
@@ -299,7 +299,7 @@
         UqlUKpVKpVKpVCqVSqVSqVQpTXfc8X+w2U8jFSd0nQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnThongKeTinhTrangVatTu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/4QAuRXhpZgAATU0AKgAAAAgAAkAAAAMAAAABACAAAEABAAEAAAAB
         AAAAAAAAAAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMgIyIoLTkwKCo2KyIjMkQy
