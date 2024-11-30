@@ -131,7 +131,6 @@
     <Compile Include="Themlichhen.Designer.cs">
       <DependentUpon>Themlichhen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Trans.cs" />
     <Compile Include="UIhelper.cs">
       <SubType>Component</SubType>
     </Compile>

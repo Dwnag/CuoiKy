@@ -49,6 +49,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.quanly = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.roundPictureBox10 = new ArtanComponent.RoundPictureBox();
@@ -69,7 +70,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button4 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -105,7 +105,7 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(984, 72);
+            this.menuStrip1.Size = new System.Drawing.Size(984, 74);
             this.menuStrip1.TabIndex = 32;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -114,7 +114,7 @@
             this.menuToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.menuToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(174, 68);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(174, 70);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // quảnLýToolStripMenuItem
@@ -123,27 +123,27 @@
             this.quảnLýToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             this.quảnLýToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(247, 68);
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(247, 70);
             this.quảnLýToolStripMenuItem.Text = "Quản Lý";
             // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(255, 68);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(255, 70);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(286, 68);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(286, 70);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(387, 68);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(387, 70);
             this.toolStripMenuItem1.Text = "toolStripMenuItem1";
             // 
             // panel3
@@ -162,7 +162,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1872, 1093);
+            this.panel3.Size = new System.Drawing.Size(1753, 919);
             this.panel3.TabIndex = 2;
             // 
             // panel5
@@ -182,7 +182,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.MaximumSize = new System.Drawing.Size(1872, 1093);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1872, 1093);
+            this.panel5.Size = new System.Drawing.Size(1753, 919);
             this.panel5.TabIndex = 39;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -192,7 +192,7 @@
             this.btnChuphongkham.FlatAppearance.BorderSize = 0;
             this.btnChuphongkham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChuphongkham.Image = ((System.Drawing.Image)(resources.GetObject("btnChuphongkham.Image")));
-            this.btnChuphongkham.Location = new System.Drawing.Point(1342, 647);
+            this.btnChuphongkham.Location = new System.Drawing.Point(1317, 607);
             this.btnChuphongkham.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChuphongkham.Name = "btnChuphongkham";
             this.btnChuphongkham.Size = new System.Drawing.Size(182, 192);
@@ -206,7 +206,7 @@
             this.btnNhapxuatvattu.FlatAppearance.BorderSize = 0;
             this.btnNhapxuatvattu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhapxuatvattu.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapxuatvattu.Image")));
-            this.btnNhapxuatvattu.Location = new System.Drawing.Point(626, 656);
+            this.btnNhapxuatvattu.Location = new System.Drawing.Point(601, 616);
             this.btnNhapxuatvattu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNhapxuatvattu.Name = "btnNhapxuatvattu";
             this.btnNhapxuatvattu.Size = new System.Drawing.Size(207, 192);
@@ -220,7 +220,7 @@
             this.btnBacsi.FlatAppearance.BorderSize = 0;
             this.btnBacsi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBacsi.Image = ((System.Drawing.Image)(resources.GetObject("btnBacsi.Image")));
-            this.btnBacsi.Location = new System.Drawing.Point(1342, 273);
+            this.btnBacsi.Location = new System.Drawing.Point(1317, 257);
             this.btnBacsi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBacsi.Name = "btnBacsi";
             this.btnBacsi.Size = new System.Drawing.Size(207, 189);
@@ -234,7 +234,7 @@
             this.btnLetan.FlatAppearance.BorderSize = 0;
             this.btnLetan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLetan.Image = ((System.Drawing.Image)(resources.GetObject("btnLetan.Image")));
-            this.btnLetan.Location = new System.Drawing.Point(606, 258);
+            this.btnLetan.Location = new System.Drawing.Point(581, 242);
             this.btnLetan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLetan.Name = "btnLetan";
             this.btnLetan.Size = new System.Drawing.Size(238, 210);
@@ -246,7 +246,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1287, 861);
+            this.label10.Location = new System.Drawing.Point(1262, 821);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(274, 41);
             this.label10.TabIndex = 41;
@@ -256,7 +256,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(614, 861);
+            this.label9.Location = new System.Drawing.Point(589, 821);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(219, 41);
             this.label9.TabIndex = 40;
@@ -269,14 +269,14 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 157);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(329, 936);
+            this.panel8.Size = new System.Drawing.Size(329, 762);
             this.panel8.TabIndex = 39;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1389, 481);
+            this.label7.Location = new System.Drawing.Point(1364, 465);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(109, 41);
             this.label7.TabIndex = 29;
@@ -286,7 +286,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(658, 481);
+            this.label8.Location = new System.Drawing.Point(633, 465);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 41);
             this.label8.TabIndex = 28;
@@ -304,8 +304,19 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1872, 157);
+            this.panel7.Size = new System.Drawing.Size(1753, 157);
             this.panel7.TabIndex = 38;
+            // 
+            // button4
+            // 
+            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(326, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(345, 156);
+            this.button4.TabIndex = 41;
+            this.button4.Text = "Menu";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // quanly
             // 
@@ -497,24 +508,13 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // button4
-            // 
-            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(326, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(345, 156);
-            this.button4.TabIndex = 41;
-            this.button4.Text = "Menu";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // Menu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1872, 1093);
+            this.ClientSize = new System.Drawing.Size(1753, 919);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Cursor = System.Windows.Forms.Cursors.Hand;

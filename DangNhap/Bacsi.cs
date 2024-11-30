@@ -21,5 +21,12 @@ namespace DangNhap
         {
             backToMenu.back(this);
         }
+
+        private void btnXemlichlam_Click(object sender, EventArgs e)
+        {
+            XemBenhAn xemBenhAn = new XemBenhAn();  
+            xemBenhAn.Show();
+            this.Hide();
+        }
     }
 }

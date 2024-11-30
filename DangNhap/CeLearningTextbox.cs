@@ -89,7 +89,6 @@ namespace DangNhap
             {
                 e.Graphics.FillPath((Brush)brush, this.innerRect);
             }
-            Trans.MakeTransparent(this, e.Graphics);
             base.OnPaint(e);
         }
 
