@@ -33,5 +33,12 @@ namespace DangNhap
             themlichhen.Show();
             this.Hide();
         }
+
+        private void btnNhapXuatVatTu_Click(object sender, EventArgs e)
+        {
+            ThemBenhNhan themBN = new ThemBenhNhan();
+            themBN.Show();
+            this.Hide();
+        }
     }
 }

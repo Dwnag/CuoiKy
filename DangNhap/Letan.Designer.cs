@@ -207,6 +207,7 @@
             this.btnNhapXuatVatTu.Size = new System.Drawing.Size(218, 190);
             this.btnNhapXuatVatTu.TabIndex = 4;
             this.btnNhapXuatVatTu.UseVisualStyleBackColor = true;
+            this.btnNhapXuatVatTu.Click += new System.EventHandler(this.btnNhapXuatVatTu_Click);
             // 
             // LeTan
             // 
