@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyApp.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,9 @@ namespace DangNhap
         public Themlichhen()
         {
             InitializeComponent();
+            this.FormClosing += (sender, e) => FormCloseHandler.exitProgram(this, e);
         }
+
 
         private void exit_Click(object sender, EventArgs e)
         {
@@ -38,7 +41,7 @@ namespace DangNhap
             string ngayHen = ngayhentxt.Text.Trim();
             string dichVu = dichvutxt.Text.Trim();
             string khungGio = khunggiotxt.Text.Trim();
-            string bacSi = listBox1.SelectedItem?.ToString() ?? string.Empty;
+            string bacSi = Bacsi.SelectedItem?.ToString() ?? string.Empty;
 
             // Kiểm tra dữ liệu trước khi lưu
             if (string.IsNullOrEmpty(ho) || string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(gioiTinh) ||
@@ -114,7 +117,30 @@ namespace DangNhap
             ngayhentxt.Clear();
             dichvutxt.Clear();
             khunggiotxt.Clear();
-            if (listBox1.Items.Count > 0) listBox1.SelectedIndex = -1;
+            if (Bacsi.Items.Count > 0) Bacsi.SelectedIndex = -1;
+        }
+
+        private void Themlichhen_Load(object sender, EventArgs e)
+        {
+            List<string> danhSachBacSi = new List<string>
+            {
+                "Bác sĩ Nguyễn Văn Sáng",
+                "Bác sĩ Trần Thị Huyền",
+                "Bác sĩ Lê Văn Khánh",
+                "Bác sĩ Phạm Thị Diệu   "
+            };
+
+            // Thêm danh sách vào ComboBox
+            foreach (string bacSi in danhSachBacSi)
+            {
+                Bacsi.Items.Add(bacSi);
+            }
+
+            // Tùy chọn: Đặt mục đầu tiên làm mục mặc định
+            if (Bacsi.Items.Count > 0)
+            {
+                Bacsi.SelectedIndex = 0;
+            }
         }
     }
 }

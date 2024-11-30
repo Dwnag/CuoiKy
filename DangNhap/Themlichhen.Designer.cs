@@ -31,7 +31,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.Bacsi = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.khunggiotxt = new System.Windows.Forms.TextBox();
@@ -92,7 +92,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.listBox1);
+            this.panel2.Controls.Add(this.Bacsi);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.khunggiotxt);
@@ -107,15 +107,14 @@
             this.panel2.Size = new System.Drawing.Size(1548, 263);
             this.panel2.TabIndex = 5;
             // 
-            // listBox1
+            // Bacsi
             // 
-            this.listBox1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 36;
-            this.listBox1.Location = new System.Drawing.Point(1026, 112);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(243, 40);
-            this.listBox1.TabIndex = 32;
+            this.Bacsi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bacsi.FormattingEnabled = true;
+            this.Bacsi.Location = new System.Drawing.Point(1026, 120);
+            this.Bacsi.Name = "Bacsi";
+            this.Bacsi.Size = new System.Drawing.Size(347, 35);
+            this.Bacsi.TabIndex = 33;
             // 
             // label15
             // 
@@ -458,6 +457,7 @@
             this.Name = "Themlichhen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm lịch hẹn";
+            this.Load += new System.EventHandler(this.Themlichhen_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -504,6 +504,6 @@
         private System.Windows.Forms.TextBox chuandoantxt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox gmailtxt;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox Bacsi;
     }
 }
