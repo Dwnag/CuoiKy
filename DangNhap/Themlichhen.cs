@@ -38,9 +38,9 @@ namespace DangNhap
             string gmail = gmailtxt.Text.Trim();
             string maKham = Makham.Text.Trim();
             string chuanDoan = chuandoantxt.Text.Trim();
-            string ngayHen = ngayhentxt.Text.Trim();
+            string ngayHen = Ngayhen.Text.Trim();
             string dichVu = dichvutxt.Text.Trim();
-            string khungGio = khunggiotxt.Text.Trim();
+            string khungGio = khunggio.SelectedItem?.ToString() ?? string.Empty;
             string bacSi = Bacsi.SelectedItem?.ToString() ?? string.Empty;
 
             // Kiểm tra dữ liệu trước khi lưu
@@ -86,7 +86,7 @@ namespace DangNhap
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Thêm hồ sơ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            ClearInputs(); // Xóa trắng các trường sau khi thêm
+                            clearInputs(); // Xóa trắng các trường sau khi thêm
                         }
                         else
                         {
@@ -102,7 +102,7 @@ namespace DangNhap
         }
 
         // Hàm xóa trắng các điều khiển
-        private void ClearInputs()
+        private void clearInputs()
         {
             Hotxt.Clear();
             tentxt.Clear();
@@ -114,14 +114,27 @@ namespace DangNhap
             gmailtxt.Clear();
             Makham.Clear();
             chuandoantxt.Clear();
-            ngayhentxt.Clear();
+            Ngayhen.Value = DateTime.Now;
             dichvutxt.Clear();
-            khunggiotxt.Clear();
+            if (khunggio.Items.Count > 0) khunggio.SelectedIndex = -1;
             if (Bacsi.Items.Count > 0) Bacsi.SelectedIndex = -1;
         }
 
-        private void Themlichhen_Load(object sender, EventArgs e)
+        //Tạo mã khám tự động
+        private string GenerateMaKham()
         {
+            // Dựa trên số ngẫu nhiên
+            Random random = new Random();
+            int soNgauNhien = random.Next(100, 999); // Tạo số ngẫu nhiên từ 1 đến 99
+            return $"NK-{soNgauNhien}";
+        }
+
+        private void themlichhen_Load(object sender, EventArgs e)
+        {
+
+            string maKham = GenerateMaKham();
+            Makham.Text = maKham;
+
             List<string> danhSachBacSi = new List<string>
             {
                 "Bác sĩ Nguyễn Văn Sáng",
@@ -140,6 +153,27 @@ namespace DangNhap
             if (Bacsi.Items.Count > 0)
             {
                 Bacsi.SelectedIndex = 0;
+            }
+
+            // Khung Giờ
+            List<string> khunggiolamviec = new List<string>
+            {
+                "08:00 - 12:00",
+                "13:00 - 17:00",
+                "10:00 - 14:00",
+                "14:00 - 18:00"
+            };
+
+            // Thêm danh sách vào ComboBox
+            foreach (string time in khunggiolamviec)
+            {
+                khunggio.Items.Add(time);
+            }
+
+            // Tùy chọn: Đặt mục đầu tiên làm mục mặc định
+            if (khunggio.Items.Count > 0)
+            {
+                khunggio.SelectedIndex = 0;
             }
         }
     }

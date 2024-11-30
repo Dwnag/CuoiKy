@@ -23,7 +23,7 @@ namespace DangNhap
         {
             InitializeComponent();
             // Giữ  nút Close, tắt nút Maximize và Minimize
-            this.MaximizeBox = false;  
+            this.MaximizeBox = false;   
             this.MinimizeBox = false;  
             this.ControlBox = true;   
 

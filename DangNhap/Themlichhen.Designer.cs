@@ -34,11 +34,9 @@
             this.Bacsi = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.khunggiotxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dichvutxt = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.ngayhentxt = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.chuandoantxt = new System.Windows.Forms.TextBox();
             this.exit = new System.Windows.Forms.Button();
@@ -50,8 +48,6 @@
             this.nam = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.Ngaysinh = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tentxt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,6 +59,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Hotxt = new System.Windows.Forms.TextBox();
+            this.khunggio = new System.Windows.Forms.ComboBox();
+            this.Ngayhen = new System.Windows.Forms.DateTimePicker();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -92,14 +90,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.Ngayhen);
+            this.panel2.Controls.Add(this.khunggio);
             this.panel2.Controls.Add(this.Bacsi);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.khunggiotxt);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.dichvutxt);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.ngayhentxt);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.chuandoantxt);
             this.panel2.Location = new System.Drawing.Point(25, 481);
@@ -138,14 +136,6 @@
             this.label14.TabIndex = 29;
             this.label14.Text = "Khung giờ";
             // 
-            // khunggiotxt
-            // 
-            this.khunggiotxt.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.khunggiotxt.Location = new System.Drawing.Point(1026, 30);
-            this.khunggiotxt.Name = "khunggiotxt";
-            this.khunggiotxt.Size = new System.Drawing.Size(243, 44);
-            this.khunggiotxt.TabIndex = 28;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -175,14 +165,6 @@
             this.label12.Size = new System.Drawing.Size(134, 36);
             this.label12.TabIndex = 25;
             this.label12.Text = "Ngày hẹn";
-            // 
-            // ngayhentxt
-            // 
-            this.ngayhentxt.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ngayhentxt.Location = new System.Drawing.Point(274, 104);
-            this.ngayhentxt.Name = "ngayhentxt";
-            this.ngayhentxt.Size = new System.Drawing.Size(243, 44);
-            this.ngayhentxt.TabIndex = 24;
             // 
             // label11
             // 
@@ -238,8 +220,6 @@
             this.panel3.Controls.Add(this.nam);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.Ngaysinh);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.textBox9);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.tentxt);
             this.panel3.Controls.Add(this.label8);
@@ -261,7 +241,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(847, 282);
+            this.label1.Location = new System.Drawing.Point(864, 286);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 36);
             this.label1.TabIndex = 21;
@@ -269,8 +249,9 @@
             // 
             // Makham
             // 
+            this.Makham.Enabled = false;
             this.Makham.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Makham.Location = new System.Drawing.Point(1026, 286);
+            this.Makham.Location = new System.Drawing.Point(1081, 278);
             this.Makham.Name = "Makham";
             this.Makham.Size = new System.Drawing.Size(179, 44);
             this.Makham.TabIndex = 20;
@@ -279,7 +260,7 @@
             // 
             this.nữ.AutoSize = true;
             this.nữ.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nữ.Location = new System.Drawing.Point(1180, 103);
+            this.nữ.Location = new System.Drawing.Point(1180, 139);
             this.nữ.Name = "nữ";
             this.nữ.Size = new System.Drawing.Size(80, 40);
             this.nữ.TabIndex = 19;
@@ -291,7 +272,7 @@
             // 
             this.nam.AutoSize = true;
             this.nam.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nam.Location = new System.Drawing.Point(1026, 105);
+            this.nam.Location = new System.Drawing.Point(1026, 141);
             this.nam.Name = "nam";
             this.nam.Size = new System.Drawing.Size(100, 40);
             this.nam.TabIndex = 18;
@@ -304,7 +285,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(851, 107);
+            this.label2.Location = new System.Drawing.Point(851, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 36);
             this.label2.TabIndex = 16;
@@ -318,31 +299,12 @@
             this.Ngaysinh.Size = new System.Drawing.Size(342, 35);
             this.Ngaysinh.TabIndex = 14;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(907, 173);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 36);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Tuổi";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(1026, 165);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(243, 44);
-            this.textBox9.TabIndex = 12;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(917, 37);
+            this.label9.Location = new System.Drawing.Point(917, 73);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 36);
             this.label9.TabIndex = 11;
@@ -351,7 +313,7 @@
             // tentxt
             // 
             this.tentxt.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tentxt.Location = new System.Drawing.Point(1026, 29);
+            this.tentxt.Location = new System.Drawing.Point(1026, 65);
             this.tentxt.Name = "tentxt";
             this.tentxt.Size = new System.Drawing.Size(243, 44);
             this.tentxt.TabIndex = 10;
@@ -372,7 +334,7 @@
             this.gmailtxt.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gmailtxt.Location = new System.Drawing.Point(186, 286);
             this.gmailtxt.Name = "gmailtxt";
-            this.gmailtxt.Size = new System.Drawing.Size(243, 44);
+            this.gmailtxt.Size = new System.Drawing.Size(543, 44);
             this.gmailtxt.TabIndex = 8;
             // 
             // label7
@@ -391,7 +353,7 @@
             this.diachitxt.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diachitxt.Location = new System.Drawing.Point(186, 225);
             this.diachitxt.Name = "diachitxt";
-            this.diachitxt.Size = new System.Drawing.Size(725, 44);
+            this.diachitxt.Size = new System.Drawing.Size(663, 44);
             this.diachitxt.TabIndex = 6;
             // 
             // label6
@@ -443,6 +405,23 @@
             this.Hotxt.Size = new System.Drawing.Size(243, 44);
             this.Hotxt.TabIndex = 0;
             // 
+            // khunggio
+            // 
+            this.khunggio.FormattingEnabled = true;
+            this.khunggio.Location = new System.Drawing.Point(1026, 38);
+            this.khunggio.Name = "khunggio";
+            this.khunggio.Size = new System.Drawing.Size(234, 28);
+            this.khunggio.TabIndex = 34;
+            // 
+            // Ngayhen
+            // 
+            this.Ngayhen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ngayhen.Location = new System.Drawing.Point(274, 111);
+            this.Ngayhen.Name = "Ngayhen";
+            this.Ngayhen.Size = new System.Drawing.Size(317, 35);
+            this.Ngayhen.TabIndex = 35;
+            this.Ngayhen.Value = new System.DateTime(2024, 1, 1, 15, 55, 0, 0);
+            // 
             // Themlichhen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -457,7 +436,7 @@
             this.Name = "Themlichhen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm lịch hẹn";
-            this.Load += new System.EventHandler(this.Themlichhen_Load);
+            this.Load += new System.EventHandler(this.themlichhen_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -476,8 +455,6 @@
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tentxt;
         private System.Windows.Forms.Label label7;
@@ -495,15 +472,15 @@
         private System.Windows.Forms.TextBox Makham;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox khunggiotxt;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox dichvutxt;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox ngayhentxt;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox chuandoantxt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox gmailtxt;
         private System.Windows.Forms.ComboBox Bacsi;
+        private System.Windows.Forms.ComboBox khunggio;
+        private System.Windows.Forms.DateTimePicker Ngayhen;
     }
 }

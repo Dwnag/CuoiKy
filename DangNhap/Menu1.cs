@@ -16,7 +16,6 @@ namespace DangNhap
         public Menu1()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
             //dừng chương trình khi nhấn x
             this.FormClosing += (sender, e) => FormCloseHandler.exitProgram(this, e);
         }
