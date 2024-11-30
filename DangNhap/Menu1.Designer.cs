@@ -39,10 +39,6 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnChuphongkham = new System.Windows.Forms.Button();
-            this.btnNhapxuatvattu = new System.Windows.Forms.Button();
-            this.btnBacsi = new System.Windows.Forms.Button();
-            this.btnLetan = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -51,15 +47,10 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.quanly = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.roundPictureBox10 = new ArtanComponent.RoundPictureBox();
             this.dangxuat = new System.Windows.Forms.Button();
             this.menu = new System.Windows.Forms.Button();
             this.thongke = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.roundPictureBox4 = new ArtanComponent.RoundPictureBox();
-            this.roundPictureBox3 = new ArtanComponent.RoundPictureBox();
-            this.roundPictureBox2 = new ArtanComponent.RoundPictureBox();
-            this.roundPictureBox1 = new ArtanComponent.RoundPictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,17 +60,26 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnChuphongkham = new System.Windows.Forms.Button();
+            this.btnNhapxuatvattu = new System.Windows.Forms.Button();
+            this.btnBacsi = new System.Windows.Forms.Button();
+            this.btnLetan = new System.Windows.Forms.Button();
+            this.roundPictureBox10 = new ArtanComponent.RoundPictureBox();
+            this.roundPictureBox4 = new ArtanComponent.RoundPictureBox();
+            this.roundPictureBox3 = new ArtanComponent.RoundPictureBox();
+            this.roundPictureBox2 = new ArtanComponent.RoundPictureBox();
+            this.roundPictureBox1 = new ArtanComponent.RoundPictureBox();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -161,7 +161,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1737, 859);
+            this.panel3.Size = new System.Drawing.Size(1872, 1093);
             this.panel3.TabIndex = 2;
             // 
             // panel5
@@ -179,72 +179,17 @@
             this.panel5.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.MaximumSize = new System.Drawing.Size(1872, 1093);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1737, 859);
+            this.panel5.Size = new System.Drawing.Size(1872, 1093);
             this.panel5.TabIndex = 39;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
-            // btnChuphongkham
-            // 
-            this.btnChuphongkham.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChuphongkham.FlatAppearance.BorderSize = 0;
-            this.btnChuphongkham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChuphongkham.Image = ((System.Drawing.Image)(resources.GetObject("btnChuphongkham.Image")));
-            this.btnChuphongkham.Location = new System.Drawing.Point(1284, 526);
-            this.btnChuphongkham.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnChuphongkham.Name = "btnChuphongkham";
-            this.btnChuphongkham.Size = new System.Drawing.Size(182, 192);
-            this.btnChuphongkham.TabIndex = 45;
-            this.btnChuphongkham.UseVisualStyleBackColor = true;
-            this.btnChuphongkham.Click += new System.EventHandler(this.btnChuphongkham_Click);
-            // 
-            // btnNhapxuatvattu
-            // 
-            this.btnNhapxuatvattu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNhapxuatvattu.FlatAppearance.BorderSize = 0;
-            this.btnNhapxuatvattu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhapxuatvattu.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapxuatvattu.Image")));
-            this.btnNhapxuatvattu.Location = new System.Drawing.Point(568, 535);
-            this.btnNhapxuatvattu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnNhapxuatvattu.Name = "btnNhapxuatvattu";
-            this.btnNhapxuatvattu.Size = new System.Drawing.Size(207, 192);
-            this.btnNhapxuatvattu.TabIndex = 44;
-            this.btnNhapxuatvattu.UseVisualStyleBackColor = true;
-            this.btnNhapxuatvattu.Click += new System.EventHandler(this.btnNhapxuatvattu_Click_1);
-            // 
-            // btnBacsi
-            // 
-            this.btnBacsi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBacsi.FlatAppearance.BorderSize = 0;
-            this.btnBacsi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBacsi.Image = ((System.Drawing.Image)(resources.GetObject("btnBacsi.Image")));
-            this.btnBacsi.Location = new System.Drawing.Point(1284, 227);
-            this.btnBacsi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnBacsi.Name = "btnBacsi";
-            this.btnBacsi.Size = new System.Drawing.Size(207, 189);
-            this.btnBacsi.TabIndex = 43;
-            this.btnBacsi.UseVisualStyleBackColor = true;
-            this.btnBacsi.Click += new System.EventHandler(this.btnBacsi_Click);
-            // 
-            // btnLetan
-            // 
-            this.btnLetan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLetan.FlatAppearance.BorderSize = 0;
-            this.btnLetan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLetan.Image = ((System.Drawing.Image)(resources.GetObject("btnLetan.Image")));
-            this.btnLetan.Location = new System.Drawing.Point(548, 212);
-            this.btnLetan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnLetan.Name = "btnLetan";
-            this.btnLetan.Size = new System.Drawing.Size(238, 210);
-            this.btnLetan.TabIndex = 42;
-            this.btnLetan.UseVisualStyleBackColor = true;
-            this.btnLetan.Click += new System.EventHandler(this.btnLetan_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1229, 740);
+            this.label10.Location = new System.Drawing.Point(1287, 861);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(274, 41);
             this.label10.TabIndex = 41;
@@ -254,7 +199,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(556, 740);
+            this.label9.Location = new System.Drawing.Point(614, 861);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(219, 41);
             this.label9.TabIndex = 40;
@@ -267,14 +212,14 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 157);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(329, 702);
+            this.panel8.Size = new System.Drawing.Size(329, 936);
             this.panel8.TabIndex = 39;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1321, 406);
+            this.label7.Location = new System.Drawing.Point(1389, 481);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(109, 41);
             this.label7.TabIndex = 29;
@@ -284,7 +229,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(590, 406);
+            this.label8.Location = new System.Drawing.Point(658, 481);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 41);
             this.label8.TabIndex = 28;
@@ -302,7 +247,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1737, 157);
+            this.panel7.Size = new System.Drawing.Size(1872, 157);
             this.panel7.TabIndex = 38;
             // 
             // quanly
@@ -324,16 +269,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(218, 617);
             this.panel6.TabIndex = 39;
-            // 
-            // roundPictureBox10
-            // 
-            this.roundPictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("roundPictureBox10.Image")));
-            this.roundPictureBox10.Location = new System.Drawing.Point(75, 35);
-            this.roundPictureBox10.Name = "roundPictureBox10";
-            this.roundPictureBox10.Size = new System.Drawing.Size(116, 92);
-            this.roundPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox10.TabIndex = 40;
-            this.roundPictureBox10.TabStop = false;
             // 
             // dangxuat
             // 
@@ -378,46 +313,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(224, 670);
             this.panel1.TabIndex = 37;
-            // 
-            // roundPictureBox4
-            // 
-            this.roundPictureBox4.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_040125;
-            this.roundPictureBox4.Location = new System.Drawing.Point(825, 503);
-            this.roundPictureBox4.Name = "roundPictureBox4";
-            this.roundPictureBox4.Size = new System.Drawing.Size(178, 178);
-            this.roundPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox4.TabIndex = 36;
-            this.roundPictureBox4.TabStop = false;
-            // 
-            // roundPictureBox3
-            // 
-            this.roundPictureBox3.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034310;
-            this.roundPictureBox3.Location = new System.Drawing.Point(327, 503);
-            this.roundPictureBox3.Name = "roundPictureBox3";
-            this.roundPictureBox3.Size = new System.Drawing.Size(178, 178);
-            this.roundPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox3.TabIndex = 35;
-            this.roundPictureBox3.TabStop = false;
-            // 
-            // roundPictureBox2
-            // 
-            this.roundPictureBox2.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034253;
-            this.roundPictureBox2.Location = new System.Drawing.Point(825, 188);
-            this.roundPictureBox2.Name = "roundPictureBox2";
-            this.roundPictureBox2.Size = new System.Drawing.Size(178, 178);
-            this.roundPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox2.TabIndex = 34;
-            this.roundPictureBox2.TabStop = false;
-            // 
-            // roundPictureBox1
-            // 
-            this.roundPictureBox1.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034228;
-            this.roundPictureBox1.Location = new System.Drawing.Point(327, 188);
-            this.roundPictureBox1.Name = "roundPictureBox1";
-            this.roundPictureBox1.Size = new System.Drawing.Size(178, 178);
-            this.roundPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox1.TabIndex = 33;
-            this.roundPictureBox1.TabStop = false;
             // 
             // label6
             // 
@@ -502,21 +397,129 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // btnChuphongkham
+            // 
+            this.btnChuphongkham.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChuphongkham.FlatAppearance.BorderSize = 0;
+            this.btnChuphongkham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChuphongkham.Image = ((System.Drawing.Image)(resources.GetObject("btnChuphongkham.Image")));
+            this.btnChuphongkham.Location = new System.Drawing.Point(1342, 647);
+            this.btnChuphongkham.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChuphongkham.Name = "btnChuphongkham";
+            this.btnChuphongkham.Size = new System.Drawing.Size(182, 192);
+            this.btnChuphongkham.TabIndex = 45;
+            this.btnChuphongkham.UseVisualStyleBackColor = true;
+            this.btnChuphongkham.Click += new System.EventHandler(this.btnChuphongkham_Click);
+            // 
+            // btnNhapxuatvattu
+            // 
+            this.btnNhapxuatvattu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNhapxuatvattu.FlatAppearance.BorderSize = 0;
+            this.btnNhapxuatvattu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhapxuatvattu.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapxuatvattu.Image")));
+            this.btnNhapxuatvattu.Location = new System.Drawing.Point(626, 656);
+            this.btnNhapxuatvattu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnNhapxuatvattu.Name = "btnNhapxuatvattu";
+            this.btnNhapxuatvattu.Size = new System.Drawing.Size(207, 192);
+            this.btnNhapxuatvattu.TabIndex = 44;
+            this.btnNhapxuatvattu.UseVisualStyleBackColor = true;
+            this.btnNhapxuatvattu.Click += new System.EventHandler(this.btnNhapxuatvattu_Click_1);
+            // 
+            // btnBacsi
+            // 
+            this.btnBacsi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBacsi.FlatAppearance.BorderSize = 0;
+            this.btnBacsi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBacsi.Image = ((System.Drawing.Image)(resources.GetObject("btnBacsi.Image")));
+            this.btnBacsi.Location = new System.Drawing.Point(1342, 273);
+            this.btnBacsi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBacsi.Name = "btnBacsi";
+            this.btnBacsi.Size = new System.Drawing.Size(207, 189);
+            this.btnBacsi.TabIndex = 43;
+            this.btnBacsi.UseVisualStyleBackColor = true;
+            this.btnBacsi.Click += new System.EventHandler(this.btnBacsi_Click);
+            // 
+            // btnLetan
+            // 
+            this.btnLetan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLetan.FlatAppearance.BorderSize = 0;
+            this.btnLetan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLetan.Image = ((System.Drawing.Image)(resources.GetObject("btnLetan.Image")));
+            this.btnLetan.Location = new System.Drawing.Point(606, 258);
+            this.btnLetan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLetan.Name = "btnLetan";
+            this.btnLetan.Size = new System.Drawing.Size(238, 210);
+            this.btnLetan.TabIndex = 42;
+            this.btnLetan.UseVisualStyleBackColor = true;
+            this.btnLetan.Click += new System.EventHandler(this.btnLetan_Click);
+            // 
+            // roundPictureBox10
+            // 
+            this.roundPictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("roundPictureBox10.Image")));
+            this.roundPictureBox10.Location = new System.Drawing.Point(107, 34);
+            this.roundPictureBox10.Name = "roundPictureBox10";
+            this.roundPictureBox10.Size = new System.Drawing.Size(116, 92);
+            this.roundPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox10.TabIndex = 40;
+            this.roundPictureBox10.TabStop = false;
+            // 
+            // roundPictureBox4
+            // 
+            this.roundPictureBox4.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_040125;
+            this.roundPictureBox4.Location = new System.Drawing.Point(825, 503);
+            this.roundPictureBox4.Name = "roundPictureBox4";
+            this.roundPictureBox4.Size = new System.Drawing.Size(178, 178);
+            this.roundPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox4.TabIndex = 36;
+            this.roundPictureBox4.TabStop = false;
+            // 
+            // roundPictureBox3
+            // 
+            this.roundPictureBox3.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034310;
+            this.roundPictureBox3.Location = new System.Drawing.Point(327, 503);
+            this.roundPictureBox3.Name = "roundPictureBox3";
+            this.roundPictureBox3.Size = new System.Drawing.Size(178, 178);
+            this.roundPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox3.TabIndex = 35;
+            this.roundPictureBox3.TabStop = false;
+            // 
+            // roundPictureBox2
+            // 
+            this.roundPictureBox2.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034253;
+            this.roundPictureBox2.Location = new System.Drawing.Point(825, 188);
+            this.roundPictureBox2.Name = "roundPictureBox2";
+            this.roundPictureBox2.Size = new System.Drawing.Size(178, 178);
+            this.roundPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox2.TabIndex = 34;
+            this.roundPictureBox2.TabStop = false;
+            // 
+            // roundPictureBox1
+            // 
+            this.roundPictureBox1.Image = global::DangNhap.Properties.Resources.Screenshot_2024_11_06_034228;
+            this.roundPictureBox1.Location = new System.Drawing.Point(327, 188);
+            this.roundPictureBox1.Name = "roundPictureBox1";
+            this.roundPictureBox1.Size = new System.Drawing.Size(178, 178);
+            this.roundPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox1.TabIndex = 33;
+            this.roundPictureBox1.TabStop = false;
+            // 
             // Menu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1737, 859);
+            this.ClientSize = new System.Drawing.Size(1872, 1093);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1894, 1149);
             this.MinimizeBox = false;
             this.Name = "Menu1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.menu1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -527,12 +530,12 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

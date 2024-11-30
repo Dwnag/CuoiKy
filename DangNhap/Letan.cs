@@ -27,7 +27,7 @@ namespace DangNhap
             backToMenu.back(this);
         }
 
-        private void btnNhapXuatVatTu_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             Themlichhen themlichhen = new Themlichhen();
             themlichhen.Show();

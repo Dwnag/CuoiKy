@@ -264,3 +264,20 @@ INSERT INTO Thuoc (MaThuoc, TenThuoc, DVT, SoLuong, GiaBan, HamLuong, GhiChu, Lo
 VALUES (dbo.GenerateMaThuoc(), N'Amoxicillin', N'Lọ', 30, 100000.00, '500mg', NULL, N'Kháng sinh', '2026-12-15');
 
 SELECT * FROM VatLieu;
+
+CREATE TABLE Appointments (
+    ID INT IDENTITY PRIMARY KEY,
+    Ho NVARCHAR(50),
+    Ten NVARCHAR(50),
+    NgaySinh DATE,
+    GioiTinh NVARCHAR(10),
+    SDT NVARCHAR(15),
+    DiaChi NVARCHAR(255),
+    Gmail NVARCHAR(100),
+    MaKham NVARCHAR(50),
+    ChuanDoan NVARCHAR(255),
+    NgayHen Nvarchar(50),
+    DichVu NVARCHAR(100),
+    KhungGio NVARCHAR(50),
+    BacSi NVARCHAR(100)
+);
