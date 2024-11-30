@@ -46,37 +46,36 @@ namespace DangNhap
         {
 
         }
-
-        private void roundPictureBox8_Click(object sender, EventArgs e)
-        {
-            LeTan lt = new LeTan();
-            lt.Show();
-            this.Hide();
-        }
-
         private void menu_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void roundPictureBox6_Click(object sender, EventArgs e)
+        private void btnBacsi_Click(object sender, EventArgs e)
         {
-            NhanVienKho nvk = new NhanVienKho();
-            nvk.Show();
+            Bacsi bacsi = new Bacsi();
+            bacsi.Show();
             this.Hide();
         }
 
-        private void btnNhapXuatVatTu_Click(object sender, EventArgs e)
+        private void btnChuphongkham_Click(object sender, EventArgs e)
         {
-            LeTan leTan = new LeTan();
+            ChuPhongKham chuPhongKham = new ChuPhongKham();
+            chuPhongKham.Show();
+            this.Hide();
+        }
+
+        private void btnNhapxuatvattu_Click_1(object sender, EventArgs e)
+        {
+            NhanVienKho nhanVienKho = new NhanVienKho();
+            nhanVienKho.Show();
+            this.Hide();
+        }
+
+        private void btnLetan_Click(object sender, EventArgs e)
+        {
+            LeTan leTan = new LeTan(); 
             leTan.Show();
-            this.Hide();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            NhanVienKho nvk = new NhanVienKho();
-            nvk.Show();
             this.Hide();
         }
     }

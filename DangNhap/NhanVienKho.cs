@@ -30,9 +30,7 @@ namespace DangNhap
 
         private void exit_Click(object sender, EventArgs e)
         {
-            Menu1 menu = new Menu1();
-            menu.Show();
-            this.Hide();
+            backToMenu.back(this);
         }
 
         //private void btnNhapXuatVatTu_Click(object sender, EventArgs e)

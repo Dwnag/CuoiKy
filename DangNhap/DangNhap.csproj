@@ -46,8 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="backToMenu.cs" />
+    <Compile Include="Bacsi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bacsi.Designer.cs">
+      <DependentUpon>Bacsi.cs</DependentUpon>
+    </Compile>
     <Compile Include="CeLearningTextbox.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ChuPhongKham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChuPhongKham.Designer.cs">
+      <DependentUpon>ChuPhongKham.cs</DependentUpon>
     </Compile>
     <Compile Include="Const.cs" />
     <Compile Include="ExitProgram.cs" />
@@ -105,10 +118,22 @@
     <Compile Include="RememberAccount.cs" />
     <Compile Include="SenndMail.cs" />
     <Compile Include="TaiKhoan.cs" />
+    <Compile Include="Themlichhen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Themlichhen.Designer.cs">
+      <DependentUpon>Themlichhen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Trans.cs" />
     <Compile Include="UIhelper.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Bacsi.resx">
+      <DependentUpon>Bacsi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChuPhongKham.resx">
+      <DependentUpon>ChuPhongKham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +168,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Themlichhen.resx">
+      <DependentUpon>Themlichhen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIhelper.resx">
       <DependentUpon>UIhelper.cs</DependentUpon>
     </EmbeddedResource>

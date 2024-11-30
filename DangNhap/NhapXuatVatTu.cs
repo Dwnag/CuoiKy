@@ -13,10 +13,10 @@ namespace DangNhap
         public NhapXuatVatTu()
         {
             InitializeComponent();
-            LoadData();
+            loadData();
         }
 
-        private void LoadData()
+        private void loadData()
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -29,7 +29,7 @@ namespace DangNhap
                 dataGridView_VatTuDungCu.DataSource = vatTuTable;
 
                 // Thêm cột checkbox và khóa cột MaVatLieu
-                AddCheckboxColumn(dataGridView_VatTuDungCu);
+                addCheckboxColumn(dataGridView_VatTuDungCu);
                 dataGridView_VatTuDungCu.Columns["MaVatLieu"].ReadOnly = true;
 
                 // Load dữ liệu cho bảng Thuốc
@@ -39,12 +39,12 @@ namespace DangNhap
                 dataGridView_VatTuThuoc.DataSource = thuocTable;
 
                 // Thêm cột checkbox và khóa cột MaThuoc
-                AddCheckboxColumn(dataGridView_VatTuThuoc);
+                addCheckboxColumn(dataGridView_VatTuThuoc);
                 dataGridView_VatTuThuoc.Columns["MaThuoc"].ReadOnly = true;
             }
         }
 
-        private void AddCheckboxColumn(DataGridView dgv)
+        private void addCheckboxColumn(DataGridView dgv)
         {
             DataGridViewCheckBoxColumn checkboxColumn = new DataGridViewCheckBoxColumn
             {
@@ -64,7 +64,7 @@ namespace DangNhap
                     connection.Open();
 
                     // Cập nhật bảng Vật liệu
-                    SqlCommand updateVatLieuCmd = new SqlCommand(GenerateUpdateQuery("VatLieu"), connection);
+                    SqlCommand updateVatLieuCmd = new SqlCommand(generateUpdateQuery("VatLieu"), connection);
                     foreach (DataGridViewRow row in dataGridView_VatTuDungCu.Rows)
                     {
                         if (row.IsNewRow) continue;
@@ -85,7 +85,7 @@ namespace DangNhap
                     }
 
                     // Cập nhật bảng Thuốc
-                    SqlCommand updateThuocCmd = new SqlCommand(GenerateUpdateQuery("Thuoc"), connection);
+                    SqlCommand updateThuocCmd = new SqlCommand(generateUpdateQuery("Thuoc"), connection);
                     foreach (DataGridViewRow row in dataGridView_VatTuThuoc.Rows)
                     {
                         if (row.IsNewRow) continue;
@@ -181,7 +181,7 @@ namespace DangNhap
             }
         }
 
-        private string GenerateUpdateQuery(string tableName)
+        private string generateUpdateQuery(string tableName)
         {
             if (tableName == "VatLieu")
             {
@@ -201,7 +201,7 @@ namespace DangNhap
         }
 
         // Phương thức để tải lại dữ liệu
-        public void ReloadData()
+        public void reloadData()
         {
             try
             {
@@ -232,7 +232,7 @@ namespace DangNhap
             formNhap.FormClosed += (s, args) =>
             {
                 this.Show();
-                ReloadData(); // Gọi lại phương thức ReloadData khi form Nhap đóng
+                reloadData(); // Gọi lại phương thức ReloadData khi form Nhap đóng
             };
             formNhap.Show();
         }
