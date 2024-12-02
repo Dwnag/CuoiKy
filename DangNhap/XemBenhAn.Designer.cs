@@ -52,7 +52,6 @@
             this.btnFind = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.xquang = new System.Windows.Forms.Label();
             this.lichsu = new System.Windows.Forms.DataGridView();
             this.Lichsukham = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.Label();
@@ -315,24 +314,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.xquang);
             this.panel1.Controls.Add(this.lichsu);
             this.panel1.Controls.Add(this.Lichsukham);
             this.panel1.Location = new System.Drawing.Point(24, 453);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1548, 380);
             this.panel1.TabIndex = 30;
-            // 
-            // xquang
-            // 
-            this.xquang.AutoSize = true;
-            this.xquang.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xquang.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.xquang.Location = new System.Drawing.Point(21, 278);
-            this.xquang.Name = "xquang";
-            this.xquang.Size = new System.Drawing.Size(261, 36);
-            this.xquang.TabIndex = 3;
-            this.xquang.Text = "Hình chụp X-quang";
             // 
             // lichsu
             // 
@@ -342,7 +329,7 @@
             this.lichsu.Name = "lichsu";
             this.lichsu.RowHeadersWidth = 62;
             this.lichsu.RowTemplate.Height = 28;
-            this.lichsu.Size = new System.Drawing.Size(1490, 211);
+            this.lichsu.Size = new System.Drawing.Size(1490, 286);
             this.lichsu.TabIndex = 2;
             // 
             // Lichsukham
@@ -422,7 +409,6 @@
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Lichsukham;
-        private System.Windows.Forms.Label xquang;
         private System.Windows.Forms.DataGridView lichsu;
         private System.Windows.Forms.Label error;
     }

@@ -140,6 +140,12 @@
     <Compile Include="XemBenhAn.Designer.cs">
       <DependentUpon>XemBenhAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="XemLichHen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemLichHen.Designer.cs">
+      <DependentUpon>XemLichHen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Bacsi.resx">
       <DependentUpon>Bacsi.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XemBenhAn.resx">
       <DependentUpon>XemBenhAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemLichHen.resx">
+      <DependentUpon>XemLichHen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
