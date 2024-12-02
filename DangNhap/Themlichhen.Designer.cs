@@ -245,6 +245,7 @@
             this.Makham.Name = "Makham";
             this.Makham.Size = new System.Drawing.Size(179, 44);
             this.Makham.TabIndex = 8;
+            this.Makham.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Makham_KeyDown);
             // 
             // nữ
             // 

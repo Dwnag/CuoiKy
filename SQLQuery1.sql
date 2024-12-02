@@ -37,17 +37,25 @@ create table Lichsukham
 
 
 -- Tao bang Lich lam viec
-CREATE TABLE Lich_lam_viec
+CREATE TABLE LichHen
 (
-  Ma_lich_lam VARCHAR(5) NOT NULL,
-  Ten_lich_lam VARCHAR(25) NOT NULL,
-  Ma_le_tan VARCHAR(5) NOT NULL,
-  Ma_kho VARCHAR(5) NOT NULL,
-  PRIMARY KEY (Ma_lich_lam),
-  FOREIGN KEY (Ma_le_tan) REFERENCES Le_tan(Ma_le_tan),
-  FOREIGN KEY (Ma_kho) REFERENCES Kiem_kho(Ma_kho),
-  UNIQUE (Ma_le_tan, Ma_kho)
+  TenBS NVARCHAR(50) ,
+  Khoa NVARCHAR(50) ,
+  Ngayhen date,
+  Phong NVARCHAR(10),
+  MaKham NVARCHAR(50),
+  GioHen NVARCHAR(20),
+  Chuandoan NVARCHAR(255),
+  Ho NVARCHAR(50),
+  Ten NVARCHAR(50),
+  NgaySinh DATE,
+  GioiTinh NVARCHAR(10),
+  SDT NVARCHAR(15),
+  DiaChi NVARCHAR(255),
+  Gmail NVARCHAR(100),
 );
+
+drop table Lich_lam_viec
 
 -- Tao bang Thanh toan
 CREATE TABLE Thanh_toan
