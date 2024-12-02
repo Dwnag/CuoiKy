@@ -41,7 +41,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.chuandoantxt = new System.Windows.Forms.TextBox();
-            this.exit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.Makham = new System.Windows.Forms.TextBox();
@@ -203,23 +202,10 @@
             this.chuandoantxt.Size = new System.Drawing.Size(243, 44);
             this.chuandoantxt.TabIndex = 22;
             // 
-            // exit
-            // 
-            this.exit.BackColor = System.Drawing.SystemColors.Control;
-            this.exit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.ForeColor = System.Drawing.Color.Black;
-            this.exit.Location = new System.Drawing.Point(1312, 265);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(147, 57);
-            this.exit.TabIndex = 6;
-            this.exit.Text = "Trở lại";
-            this.exit.UseVisualStyleBackColor = false;
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.exit);
             this.panel3.Controls.Add(this.Makham);
             this.panel3.Controls.Add(this.nữ);
             this.panel3.Controls.Add(this.nam);
@@ -254,7 +240,6 @@
             // 
             // Makham
             // 
-            this.Makham.Enabled = false;
             this.Makham.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Makham.Location = new System.Drawing.Point(1081, 278);
             this.Makham.Name = "Makham";
@@ -466,7 +451,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tentxt;

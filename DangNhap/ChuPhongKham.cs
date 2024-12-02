@@ -19,7 +19,7 @@ namespace DangNhap
 
         private void exit_Click(object sender, EventArgs e)
         {
-            backToMenu.back(this);
+            BackToMenu.back(this);
         }
     }
 }

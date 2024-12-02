@@ -24,7 +24,7 @@ namespace DangNhap
 
         private void exit_Click(object sender, EventArgs e)
         {
-            backToMenu.back(this);
+            BackToMenu.back(this);
         }
 
         private void button2_Click(object sender, EventArgs e)

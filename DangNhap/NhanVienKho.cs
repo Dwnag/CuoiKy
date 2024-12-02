@@ -30,7 +30,7 @@ namespace DangNhap
 
         private void exit_Click(object sender, EventArgs e)
         {
-            backToMenu.back(this);
+            BackToMenu.back(this);
         }
 
         //private void btnNhapXuatVatTu_Click(object sender, EventArgs e)

@@ -11,7 +11,6 @@ CREATE TABLE Bac_si
 
 -- Tao bang Benh nhan
 CREATE TABLE BenhNhan(
-	ID INT IDENTITY PRIMARY KEY,
     Ho NVARCHAR(50),
     Ten NVARCHAR(50),
     NgaySinh DATE,
@@ -19,25 +18,23 @@ CREATE TABLE BenhNhan(
     SDT NVARCHAR(15),
     DiaChi NVARCHAR(255),
     Gmail NVARCHAR(100),
-    MaKham NVARCHAR(50),
+    MaKham NVARCHAR(50) primary key,
     ChuanDoan NVARCHAR(255),
 	phong nvarchar(8),
 	Khoa nvarchar(50)
 );
 
-
--- Tao bang Nhap thong tin
-CREATE TABLE Nhap_thong_tin
+-- Tao bang Lịch sử khám
+create table Lichsukham
 (
-  Ma_thong_tin VARCHAR(5) NOT NULL,
-  Ten_thong_tin VARCHAR(25) NOT NULL,
-  Ma_benh_nhan VARCHAR(5) NOT NULL,
-  Ma_le_tan VARCHAR(5) NOT NULL,
-  PRIMARY KEY (Ma_thong_tin),
-  FOREIGN KEY (Ma_benh_nhan) REFERENCES Benh_nhan(Ma_benh_nhan),
-  FOREIGN KEY (Ma_le_tan) REFERENCES Le_tan(Ma_le_tan),
-  UNIQUE (Ma_benh_nhan, Ma_le_tan)
+	Lan NVARCHAR(20),
+	Dieutri NVARCHAR(50),
+	Bacsi NVARCHAR(50),
+	Chuandoan NVARCHAR(50),
+	MaKham NVARCHAR(50),
+	FOREIGN KEY (MaKham) REFERENCES BenhNhan(MaKham)
 );
+
 
 -- Tao bang Lich lam viec
 CREATE TABLE Lich_lam_viec
@@ -148,7 +145,11 @@ VALUES (dbo.GenerateMaVatLieu(), N'Mũi Cạo vôi', NULL, NULL, N'Cái', 15000.
 INSERT INTO Thuoc (MaThuoc, TenThuoc, DVT, SoLuong, GiaBan, HamLuong, GhiChu, LoaiThuoc, HanSuDung)
 VALUES (dbo.GenerateMaThuoc(), N'Amoxicillin', N'Lọ', 30, 100000.00, '500mg', NULL, N'Kháng sinh', '2026-12-15');
 
-SELECT * FROM VatLieu;
+INSERT INTO Lichsukham
+VALUES (N'1', N'Nha Chu', N'Nhổ Răng', N'Nguyễn Văn Sáng', N'Sâu răng', N'NK-121');
+
+
+SELECT * FROM Lichsukham;
 
 CREATE TABLE Appointments (
     ID INT IDENTITY PRIMARY KEY,
@@ -166,3 +167,7 @@ CREATE TABLE Appointments (
     KhungGio NVARCHAR(50),
     BacSi NVARCHAR(100)
 );
+
+SELECT MaKham, Ho, Ten 
+FROM BenhNhan 
+WHERE Ten LIKE '%' + @Input + '%';

@@ -24,7 +24,7 @@ namespace DangNhap
 
         }
 
-        private void dangxuat_Click(object sender, EventArgs e)
+        private void btnDangxuat_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Bạn có muốn đăng xuất", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (res == DialogResult.Yes)
@@ -43,7 +43,7 @@ namespace DangNhap
 
         private void menu1_Load(object sender, EventArgs e)
         {
-
+            updateButtonColors(btnMenu);
         }
         private void menu_Click(object sender, EventArgs e)
         {
@@ -77,5 +77,34 @@ namespace DangNhap
             leTan.Show();
             this.Hide();
         }
+        private void updateButtonColors(Button activeButton)
+        {
+            foreach (var button in new List<Button> { btnMenu, btnQuanly, btnThongke })
+            {
+                // Màu mặc định
+                button.BackColor = Color.White; 
+                button.ForeColor = Color.Black; 
+            }
+
+            // Đổi màu cho nút hiện tại
+            activeButton.BackColor = Color.Gray; 
+            activeButton.ForeColor = Color.Black; 
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            updateButtonColors(btnMenu);
+        }
+
+        private void btnQuanLy_Click(object sender, EventArgs e)
+        {
+            updateButtonColors(btnQuanly);
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            updateButtonColors(btnThongke);
+        }
+
     }
 }

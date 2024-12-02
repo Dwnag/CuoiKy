@@ -48,17 +48,18 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Findtxt = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Lichsukham = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.xquang = new System.Windows.Forms.Label();
+            this.lichsu = new System.Windows.Forms.DataGridView();
+            this.Lichsukham = new System.Windows.Forms.Label();
+            this.error = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lichsu)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -101,9 +102,9 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(24, 134);
+            this.panel3.Location = new System.Drawing.Point(24, 163);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1548, 298);
+            this.panel3.Size = new System.Drawing.Size(1548, 269);
             this.panel3.TabIndex = 6;
             // 
             // lblMakham
@@ -275,13 +276,13 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Họ";
             // 
-            // textBox1
+            // Findtxt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(457, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(726, 44);
-            this.textBox1.TabIndex = 7;
+            this.Findtxt.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Findtxt.Location = new System.Drawing.Point(457, 76);
+            this.Findtxt.Name = "Findtxt";
+            this.Findtxt.Size = new System.Drawing.Size(726, 44);
+            this.Findtxt.TabIndex = 7;
             // 
             // btnFind
             // 
@@ -295,6 +296,8 @@
             this.btnFind.Size = new System.Drawing.Size(91, 61);
             this.btnFind.TabIndex = 8;
             this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            this.btnFind.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnFind_KeyDown);
             // 
             // exit
             // 
@@ -313,33 +316,12 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.xquang);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.lichsu);
             this.panel1.Controls.Add(this.Lichsukham);
             this.panel1.Location = new System.Drawing.Point(24, 453);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1548, 380);
             this.panel1.TabIndex = 30;
-            // 
-            // Lichsukham
-            // 
-            this.Lichsukham.AutoSize = true;
-            this.Lichsukham.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lichsukham.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Lichsukham.Location = new System.Drawing.Point(21, 10);
-            this.Lichsukham.Name = "Lichsukham";
-            this.Lichsukham.Size = new System.Drawing.Size(252, 36);
-            this.Lichsukham.TabIndex = 1;
-            this.Lichsukham.Text = "Lịch sử khám bệnh";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1490, 211);
-            this.dataGridView1.TabIndex = 2;
             // 
             // xquang
             // 
@@ -352,15 +334,51 @@
             this.xquang.TabIndex = 3;
             this.xquang.Text = "Hình chụp X-quang";
             // 
+            // lichsu
+            // 
+            this.lichsu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.lichsu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lichsu.Location = new System.Drawing.Point(27, 64);
+            this.lichsu.Name = "lichsu";
+            this.lichsu.RowHeadersWidth = 62;
+            this.lichsu.RowTemplate.Height = 28;
+            this.lichsu.Size = new System.Drawing.Size(1490, 211);
+            this.lichsu.TabIndex = 2;
+            // 
+            // Lichsukham
+            // 
+            this.Lichsukham.AutoSize = true;
+            this.Lichsukham.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lichsukham.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Lichsukham.Location = new System.Drawing.Point(21, 10);
+            this.Lichsukham.Name = "Lichsukham";
+            this.Lichsukham.Size = new System.Drawing.Size(252, 36);
+            this.Lichsukham.TabIndex = 1;
+            this.Lichsukham.Text = "Lịch sử khám bệnh";
+            // 
+            // error
+            // 
+            this.error.AutoSize = true;
+            this.error.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.error.ForeColor = System.Drawing.Color.Red;
+            this.error.Location = new System.Drawing.Point(453, 140);
+            this.error.Name = "error";
+            this.error.Size = new System.Drawing.Size(76, 23);
+            this.error.TabIndex = 31;
+            this.error.Text = "ERROR";
+            this.error.Visible = false;
+            this.error.Click += new System.EventHandler(this.error_Click);
+            // 
             // XemBenhAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1596, 912);
+            this.Controls.Add(this.error);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.btnFind);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Findtxt);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Name = "XemBenhAn";
@@ -372,7 +390,7 @@
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lichsu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,12 +417,13 @@
         private System.Windows.Forms.Label lblsdt;
         private System.Windows.Forms.Label lblNgaysinh;
         private System.Windows.Forms.Label lblDiachi;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Findtxt;
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Lichsukham;
         private System.Windows.Forms.Label xquang;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView lichsu;
+        private System.Windows.Forms.Label error;
     }
 }

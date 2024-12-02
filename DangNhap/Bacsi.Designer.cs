@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnXemBenhAn = new System.Windows.Forms.Button();
             this.btnXemlichlam = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -144,17 +144,18 @@
             this.button2.TabIndex = 12;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnXemBenhAn
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(1116, 213);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 206);
-            this.button1.TabIndex = 11;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnXemBenhAn.FlatAppearance.BorderSize = 0;
+            this.btnXemBenhAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemBenhAn.Image = ((System.Drawing.Image)(resources.GetObject("btnXemBenhAn.Image")));
+            this.btnXemBenhAn.Location = new System.Drawing.Point(1116, 213);
+            this.btnXemBenhAn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXemBenhAn.Name = "btnXemBenhAn";
+            this.btnXemBenhAn.Size = new System.Drawing.Size(196, 206);
+            this.btnXemBenhAn.TabIndex = 11;
+            this.btnXemBenhAn.UseVisualStyleBackColor = true;
+            this.btnXemBenhAn.Click += new System.EventHandler(this.btnXemBenhAn_Click);
             // 
             // btnXemlichlam
             // 
@@ -202,7 +203,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnXemBenhAn);
             this.Controls.Add(this.btnXemlichlam);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
@@ -228,7 +229,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnXemBenhAn;
         private System.Windows.Forms.Button btnXemlichlam;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;

@@ -23,9 +23,6 @@ namespace DangNhap
         {
             InitializeComponent();
             // Giữ  nút Close, tắt nút Maximize và Minimize
-            this.MaximizeBox = false;   
-            this.MinimizeBox = false;  
-            this.ControlBox = true;   
 
             matkhau.KeyDown += matkhau_KeyDown;
             taikhoan.KeyDown += taiKhoan_KeyDown;

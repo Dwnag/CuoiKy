@@ -49,12 +49,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.quanly = new System.Windows.Forms.Button();
+            this.btnMenu = new System.Windows.Forms.Button();
+            this.btnQuanly = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.roundPictureBox10 = new ArtanComponent.RoundPictureBox();
-            this.dangxuat = new System.Windows.Forms.Button();
-            this.thongke = new System.Windows.Forms.Button();
+            this.btnDangxuat = new System.Windows.Forms.Button();
+            this.btnThongke = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.roundPictureBox4 = new ArtanComponent.RoundPictureBox();
             this.roundPictureBox3 = new ArtanComponent.RoundPictureBox();
@@ -105,7 +105,7 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(984, 74);
+            this.menuStrip1.Size = new System.Drawing.Size(984, 72);
             this.menuStrip1.TabIndex = 32;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -114,7 +114,7 @@
             this.menuToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.menuToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(174, 70);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(174, 68);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // quảnLýToolStripMenuItem
@@ -123,27 +123,27 @@
             this.quảnLýToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
             this.quảnLýToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(247, 70);
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(247, 68);
             this.quảnLýToolStripMenuItem.Text = "Quản Lý";
             // 
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(255, 70);
+            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(255, 68);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(286, 70);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(286, 68);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng Xuất";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(387, 70);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(387, 68);
             this.toolStripMenuItem1.Text = "toolStripMenuItem1";
             // 
             // panel3
@@ -162,7 +162,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1753, 919);
+            this.panel3.Size = new System.Drawing.Size(1715, 919);
             this.panel3.TabIndex = 2;
             // 
             // panel5
@@ -182,7 +182,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.MaximumSize = new System.Drawing.Size(1872, 1093);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1753, 919);
+            this.panel5.Size = new System.Drawing.Size(1715, 919);
             this.panel5.TabIndex = 39;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -295,40 +295,40 @@
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.button4);
-            this.panel7.Controls.Add(this.quanly);
+            this.panel7.Controls.Add(this.btnMenu);
+            this.panel7.Controls.Add(this.btnQuanly);
             this.panel7.Controls.Add(this.panel6);
             this.panel7.Controls.Add(this.roundPictureBox10);
-            this.panel7.Controls.Add(this.dangxuat);
-            this.panel7.Controls.Add(this.thongke);
+            this.panel7.Controls.Add(this.btnDangxuat);
+            this.panel7.Controls.Add(this.btnThongke);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1753, 157);
+            this.panel7.Size = new System.Drawing.Size(1715, 157);
             this.panel7.TabIndex = 38;
             // 
-            // button4
+            // btnMenu
             // 
-            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(326, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(345, 156);
-            this.button4.TabIndex = 41;
-            this.button4.Text = "Menu";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnMenu.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.Location = new System.Drawing.Point(326, 2);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(345, 156);
+            this.btnMenu.TabIndex = 41;
+            this.btnMenu.Text = "Menu";
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // quanly
+            // btnQuanly
             // 
-            this.quanly.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.quanly.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quanly.Location = new System.Drawing.Point(676, 3);
-            this.quanly.Name = "quanly";
-            this.quanly.Size = new System.Drawing.Size(337, 156);
-            this.quanly.TabIndex = 1;
-            this.quanly.Text = "Quản lý";
-            this.quanly.UseVisualStyleBackColor = true;
-            this.quanly.Click += new System.EventHandler(this.quanly_Click);
+            this.btnQuanly.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnQuanly.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanly.Location = new System.Drawing.Point(676, 3);
+            this.btnQuanly.Name = "btnQuanly";
+            this.btnQuanly.Size = new System.Drawing.Size(337, 156);
+            this.btnQuanly.TabIndex = 1;
+            this.btnQuanly.Text = "Quản lý";
+            this.btnQuanly.UseVisualStyleBackColor = true;
+            this.btnQuanly.Click += new System.EventHandler(this.quanly_Click);
             // 
             // panel6
             // 
@@ -348,28 +348,28 @@
             this.roundPictureBox10.TabIndex = 40;
             this.roundPictureBox10.TabStop = false;
             // 
-            // dangxuat
+            // btnDangxuat
             // 
-            this.dangxuat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.dangxuat.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dangxuat.Location = new System.Drawing.Point(1362, 0);
-            this.dangxuat.Name = "dangxuat";
-            this.dangxuat.Size = new System.Drawing.Size(337, 156);
-            this.dangxuat.TabIndex = 3;
-            this.dangxuat.Text = "Đăng xuất";
-            this.dangxuat.UseVisualStyleBackColor = true;
-            this.dangxuat.Click += new System.EventHandler(this.dangxuat_Click);
+            this.btnDangxuat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDangxuat.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangxuat.Location = new System.Drawing.Point(1362, 0);
+            this.btnDangxuat.Name = "btnDangxuat";
+            this.btnDangxuat.Size = new System.Drawing.Size(337, 156);
+            this.btnDangxuat.TabIndex = 3;
+            this.btnDangxuat.Text = "Đăng xuất";
+            this.btnDangxuat.UseVisualStyleBackColor = true;
+            this.btnDangxuat.Click += new System.EventHandler(this.btnDangxuat_Click);
             // 
-            // thongke
+            // btnThongke
             // 
-            this.thongke.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.thongke.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thongke.Location = new System.Drawing.Point(1019, 3);
-            this.thongke.Name = "thongke";
-            this.thongke.Size = new System.Drawing.Size(337, 152);
-            this.thongke.TabIndex = 2;
-            this.thongke.Text = "Thống kê";
-            this.thongke.UseVisualStyleBackColor = true;
+            this.btnThongke.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnThongke.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongke.Location = new System.Drawing.Point(1019, 3);
+            this.btnThongke.Name = "btnThongke";
+            this.btnThongke.Size = new System.Drawing.Size(337, 152);
+            this.btnThongke.TabIndex = 2;
+            this.btnThongke.Text = "Thống kê";
+            this.btnThongke.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -514,7 +514,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1753, 919);
+            this.ClientSize = new System.Drawing.Size(1715, 919);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -568,9 +568,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button dangxuat;
-        private System.Windows.Forms.Button thongke;
-        private System.Windows.Forms.Button quanly;
+        private System.Windows.Forms.Button btnDangxuat;
+        private System.Windows.Forms.Button btnThongke;
+        private System.Windows.Forms.Button btnQuanly;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -584,6 +584,6 @@
         private System.Windows.Forms.Button btnBacsi;
         private System.Windows.Forms.Button btnLetan;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnMenu;
     }
 }

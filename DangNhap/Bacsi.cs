@@ -24,7 +24,12 @@ namespace DangNhap
 
         private void btnXemlichlam_Click(object sender, EventArgs e)
         {
-            XemBenhAn xemBenhAn = new XemBenhAn();  
+            
+        }
+
+        private void btnXemBenhAn_Click(object sender, EventArgs e)
+        {
+            XemBenhAn xemBenhAn = new XemBenhAn();
             xemBenhAn.Show();
             this.Hide();
         }

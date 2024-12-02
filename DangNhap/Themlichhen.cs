@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -43,7 +44,7 @@ namespace DangNhap
         {
             // Dựa trên số ngẫu nhiên
             Random random = new Random();
-            int soNgauNhien = random.Next(100, 999); // Tạo số ngẫu nhiên từ 100 đến 999
+            int soNgauNhien = random.Next(001, 999); // Tạo số ngẫu nhiên từ 1 đến 999
             return $"NK-{soNgauNhien}";
         }
 
@@ -55,10 +56,10 @@ namespace DangNhap
 
             List<string> danhSachBacSi = new List<string>
             {
-                "Bác sĩ Nguyễn Văn Sáng",
-                "Bác sĩ Trần Thị Huyền",
-                "Bác sĩ Lê Văn Khánh",
-                "Bác sĩ Phạm Thị Diệu   "
+                "Nguyễn Văn Sáng",
+                "Trần Thị Huyền",
+                "Lê Văn Khánh",
+                "Phạm Thị Diệu   "
             };
 
             // Thêm danh sách vào ComboBox
@@ -126,55 +127,116 @@ namespace DangNhap
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             try
             {
-                // Chuỗi kết nối SQL Server
-                string connectionString = "Data Source=localhost;Initial Catalog=YourDatabase;Integrated Security=True";
+                string connectionString = "Data Source=localhost;Initial Catalog=ql1;Integrated Security=True";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = @"INSERT INTO Appointments (Ho, Ten, NgaySinh, GioiTinh, SDT, DiaChi, Gmail, MaKham, 
-                                                        ChuanDoan, NgayHen, DichVu, KhungGio, BacSi) 
-                             VALUES (@Ho, @Ten, @NgaySinh, @GioiTinh, @SDT, @DiaChi, @Gmail, @MaKham, 
-                                     @ChuanDoan, @NgayHen, @DichVu, @KhungGio, @BacSi)";
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    // Kiểm tra sự tồn tại của MaKham trong bảng BenhNhan
+                    string checkQuery = @"SELECT COUNT(1) FROM BenhNhan WHERE MaKham = @MaKham";
+
+                    using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection))
                     {
-                        // Thêm tham số vào câu lệnh SQL
-                        command.Parameters.AddWithValue("@Ho", ho);
-                        command.Parameters.AddWithValue("@Ten", ten);
-                        command.Parameters.AddWithValue("@NgaySinh", ngaySinh);
-                        command.Parameters.AddWithValue("@GioiTinh", gioiTinh);
-                        command.Parameters.AddWithValue("@SDT", sdt);
-                        command.Parameters.AddWithValue("@DiaChi", diaChi);
-                        command.Parameters.AddWithValue("@Gmail", gmail);
-                        command.Parameters.AddWithValue("@MaKham", maKham);
-                        command.Parameters.AddWithValue("@ChuanDoan", chuanDoan);
-                        command.Parameters.AddWithValue("@NgayHen", ngayHen);
-                        command.Parameters.AddWithValue("@DichVu", dichVu);
-                        command.Parameters.AddWithValue("@KhungGio", khungGio);
-                        command.Parameters.AddWithValue("@BacSi", bacSi);
+                        checkCommand.Parameters.AddWithValue("@MaKham", maKham);
+                        int recordCount = (int)checkCommand.ExecuteScalar();
 
-                        // Thực thi lệnh
-                        int rowsAffected = command.ExecuteNonQuery();
-                        if (rowsAffected > 0)
+                        if (recordCount == 0)
                         {
-                            MessageBox.Show("Thêm hồ sơ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clearInputs(); // Xóa trắng các trường sau khi thêm
+                            // Nếu MaKham chưa tồn tại trong bảng BenhNhan, thực hiện thêm mới
+                            string insertQuery = @"
+                            INSERT INTO BenhNhan (Ho, Ten, NgaySinh, GioiTinh, SDT, DiaChi, Gmail, MaKham, ChuanDoan) 
+                            VALUES (@Ho, @Ten, @NgaySinh, @GioiTinh, @SDT, @DiaChi, @Gmail, @MaKham, @ChuanDoan);
+
+                            INSERT INTO LichSuKham (Lan, Dieutri, Bacsi, Chuandoan, MaKham) 
+                            VALUES (1, @dichVu, @BacSi, @ChuanDoan, @MaKham)";
+
+                            using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
+                            {
+                                // Thêm các tham số cho bảng BenhNhan và LichSuKham
+                                insertCommand.Parameters.AddWithValue("@Ho", ho);
+                                insertCommand.Parameters.AddWithValue("@Ten", ten);
+                                insertCommand.Parameters.AddWithValue("@NgaySinh", ngaySinh);
+                                insertCommand.Parameters.AddWithValue("@GioiTinh", gioiTinh);
+                                insertCommand.Parameters.AddWithValue("@SDT", sdt);
+                                insertCommand.Parameters.AddWithValue("@DiaChi", diaChi);
+                                insertCommand.Parameters.AddWithValue("@Gmail", gmail);
+                                insertCommand.Parameters.AddWithValue("@MaKham", maKham);
+                                insertCommand.Parameters.AddWithValue("@ChuanDoan", chuanDoan);
+
+                                // Các tham số cho bảng LichSuKham
+                                insertCommand.Parameters.AddWithValue("@BacSi", bacSi);
+                                insertCommand.Parameters.AddWithValue("@dichVu", dichVu); // Các thông tin về dịch vụ
+
+                                // Thực thi lệnh
+                                int rowsAffected = insertCommand.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Thêm hồ sơ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    clearInputs(); // Xóa trắng các trường sau khi thêm
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Không thể thêm hồ sơ, vui lòng thử lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Không thể thêm hồ sơ, vui lòng thử lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            // Nếu MaKham đã tồn tại trong bảng BenhNhan, thực hiện cập nhật
+                            string updateQuery = @"
+                            UPDATE BenhNhan 
+                            SET Ho = @Ho, Ten = @Ten, NgaySinh = @NgaySinh, GioiTinh = @GioiTinh, SDT = @SDT, 
+                                DiaChi = @DiaChi, Gmail = @Gmail, ChuanDoan = @ChuanDoan
+                            WHERE MaKham = @MaKham;
+
+                            INSERT INTO LichSuKham (Lan, Dieutri, Bacsi, Chuandoan, MaKham) 
+                            VALUES (1, @dichVu, @BacSi, @ChuanDoan, @MaKham);
+
+                            UPDATE LichSuKham
+                            SET Lan = Lan + 1
+                            WHERE MaKham = @MaKham"; // Cập nhật số lần khám
+
+                            using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
+                            {
+                                // Thêm các tham số cho bảng BenhNhan và LichSuKham
+                                updateCommand.Parameters.AddWithValue("@Ho", ho);
+                                updateCommand.Parameters.AddWithValue("@Ten", ten);
+                                updateCommand.Parameters.AddWithValue("@NgaySinh", ngaySinh);
+                                updateCommand.Parameters.AddWithValue("@GioiTinh", gioiTinh);
+                                updateCommand.Parameters.AddWithValue("@SDT", sdt);
+                                updateCommand.Parameters.AddWithValue("@DiaChi", diaChi);
+                                updateCommand.Parameters.AddWithValue("@Gmail", gmail);
+                                updateCommand.Parameters.AddWithValue("@MaKham", maKham);
+                                updateCommand.Parameters.AddWithValue("@ChuanDoan", chuanDoan);
+                                updateCommand.Parameters.AddWithValue("@BacSi", bacSi);
+                                updateCommand.Parameters.AddWithValue("@DichVu", dichVu); // Các thông tin về dịch vụ
+
+                                // Thực thi lệnh
+                                int rowsAffected = updateCommand.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Cập nhật hồ sơ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    clearInputs();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Không thể cập nhật hồ sơ, vui lòng thử lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                            }
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi khi thêm hồ sơ: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Lỗi khi thêm hoặc cập nhật hồ sơ: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
     }
 }
