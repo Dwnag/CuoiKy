@@ -140,7 +140,7 @@
             this.nữ.Location = new System.Drawing.Point(1180, 123);
             this.nữ.Name = "nữ";
             this.nữ.Size = new System.Drawing.Size(80, 40);
-            this.nữ.TabIndex = 19;
+            this.nữ.TabIndex = 4;
             this.nữ.TabStop = true;
             this.nữ.Text = "Nữ";
             this.nữ.UseVisualStyleBackColor = true;
@@ -152,7 +152,7 @@
             this.nam.Location = new System.Drawing.Point(1026, 125);
             this.nam.Name = "nam";
             this.nam.Size = new System.Drawing.Size(100, 40);
-            this.nam.TabIndex = 18;
+            this.nam.TabIndex = 3;
             this.nam.TabStop = true;
             this.nam.Text = "Nam";
             this.nam.UseVisualStyleBackColor = true;
@@ -174,7 +174,7 @@
             this.Ngaysinh.Location = new System.Drawing.Point(186, 103);
             this.Ngaysinh.Name = "Ngaysinh";
             this.Ngaysinh.Size = new System.Drawing.Size(342, 35);
-            this.Ngaysinh.TabIndex = 14;
+            this.Ngaysinh.TabIndex = 2;
             // 
             // label9
             // 
@@ -193,7 +193,7 @@
             this.tentxt.Location = new System.Drawing.Point(1014, 29);
             this.tentxt.Name = "tentxt";
             this.tentxt.Size = new System.Drawing.Size(243, 44);
-            this.tentxt.TabIndex = 10;
+            this.tentxt.TabIndex = 1;
             // 
             // label8
             // 
@@ -212,7 +212,7 @@
             this.gmailtxt.Location = new System.Drawing.Point(186, 286);
             this.gmailtxt.Name = "gmailtxt";
             this.gmailtxt.Size = new System.Drawing.Size(543, 44);
-            this.gmailtxt.TabIndex = 8;
+            this.gmailtxt.TabIndex = 7;
             // 
             // label7
             // 
@@ -250,7 +250,7 @@
             this.sdttxt.Location = new System.Drawing.Point(186, 160);
             this.sdttxt.Name = "sdttxt";
             this.sdttxt.Size = new System.Drawing.Size(290, 44);
-            this.sdttxt.TabIndex = 4;
+            this.sdttxt.TabIndex = 5;
             // 
             // label3
             // 
@@ -308,7 +308,7 @@
             this.Tongquat.Location = new System.Drawing.Point(805, 237);
             this.Tongquat.Name = "Tongquat";
             this.Tongquat.Size = new System.Drawing.Size(167, 40);
-            this.Tongquat.TabIndex = 47;
+            this.Tongquat.TabIndex = 15;
             this.Tongquat.TabStop = true;
             this.Tongquat.Text = "Tổng quát";
             this.Tongquat.UseVisualStyleBackColor = true;
@@ -320,7 +320,7 @@
             this.Rangtreem.Location = new System.Drawing.Point(425, 237);
             this.Rangtreem.Name = "Rangtreem";
             this.Rangtreem.Size = new System.Drawing.Size(192, 40);
-            this.Rangtreem.TabIndex = 46;
+            this.Rangtreem.TabIndex = 14;
             this.Rangtreem.TabStop = true;
             this.Rangtreem.Text = "Răng trẻ em";
             this.Rangtreem.UseVisualStyleBackColor = true;
@@ -332,7 +332,7 @@
             this.Chuarang.Location = new System.Drawing.Point(94, 237);
             this.Chuarang.Name = "Chuarang";
             this.Chuarang.Size = new System.Drawing.Size(307, 40);
-            this.Chuarang.TabIndex = 45;
+            this.Chuarang.TabIndex = 13;
             this.Chuarang.TabStop = true;
             this.Chuarang.Text = "Chửa răng và nội nha";
             this.Chuarang.UseVisualStyleBackColor = true;
@@ -344,7 +344,7 @@
             this.Phuchinh.Location = new System.Drawing.Point(805, 172);
             this.Phuchinh.Name = "Phuchinh";
             this.Phuchinh.Size = new System.Drawing.Size(164, 40);
-            this.Phuchinh.TabIndex = 44;
+            this.Phuchinh.TabIndex = 12;
             this.Phuchinh.TabStop = true;
             this.Phuchinh.Text = "Phục hình";
             this.Phuchinh.UseVisualStyleBackColor = true;
@@ -356,7 +356,7 @@
             this.nhorang.Location = new System.Drawing.Point(425, 172);
             this.nhorang.Name = "nhorang";
             this.nhorang.Size = new System.Drawing.Size(317, 40);
-            this.nhorang.TabIndex = 43;
+            this.nhorang.TabIndex = 11;
             this.nhorang.TabStop = true;
             this.nhorang.Text = "Nhổ răng và tiểu phẩu";
             this.nhorang.UseVisualStyleBackColor = true;
@@ -368,7 +368,7 @@
             this.Nhachu.Location = new System.Drawing.Point(94, 172);
             this.Nhachu.Name = "Nhachu";
             this.Nhachu.Size = new System.Drawing.Size(144, 40);
-            this.Nhachu.TabIndex = 42;
+            this.Nhachu.TabIndex = 10;
             this.Nhachu.TabStop = true;
             this.Nhachu.Text = "Nha chu";
             this.Nhachu.UseVisualStyleBackColor = true;
@@ -390,7 +390,7 @@
             this.phongtxt.Location = new System.Drawing.Point(978, 38);
             this.phongtxt.Name = "phongtxt";
             this.phongtxt.Size = new System.Drawing.Size(294, 28);
-            this.phongtxt.TabIndex = 34;
+            this.phongtxt.TabIndex = 9;
             // 
             // Phong
             // 
@@ -420,7 +420,7 @@
             this.chuandoantxt.Location = new System.Drawing.Point(62, 50);
             this.chuandoantxt.Name = "chuandoantxt";
             this.chuandoantxt.Size = new System.Drawing.Size(485, 44);
-            this.chuandoantxt.TabIndex = 22;
+            this.chuandoantxt.TabIndex = 8;
             // 
             // button1
             // 

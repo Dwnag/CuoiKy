@@ -111,7 +111,7 @@
             this.Ngayhen.Location = new System.Drawing.Point(274, 111);
             this.Ngayhen.Name = "Ngayhen";
             this.Ngayhen.Size = new System.Drawing.Size(317, 35);
-            this.Ngayhen.TabIndex = 35;
+            this.Ngayhen.TabIndex = 11;
             this.Ngayhen.Value = new System.DateTime(2024, 1, 1, 15, 55, 0, 0);
             // 
             // khunggio
@@ -120,7 +120,7 @@
             this.khunggio.Location = new System.Drawing.Point(1026, 38);
             this.khunggio.Name = "khunggio";
             this.khunggio.Size = new System.Drawing.Size(234, 28);
-            this.khunggio.TabIndex = 34;
+            this.khunggio.TabIndex = 10;
             // 
             // Bacsi
             // 
@@ -129,7 +129,7 @@
             this.Bacsi.Location = new System.Drawing.Point(1026, 120);
             this.Bacsi.Name = "Bacsi";
             this.Bacsi.Size = new System.Drawing.Size(347, 35);
-            this.Bacsi.TabIndex = 33;
+            this.Bacsi.TabIndex = 12;
             // 
             // label15
             // 
@@ -170,7 +170,7 @@
             this.dichvutxt.Location = new System.Drawing.Point(274, 172);
             this.dichvutxt.Name = "dichvutxt";
             this.dichvutxt.Size = new System.Drawing.Size(243, 44);
-            this.dichvutxt.TabIndex = 26;
+            this.dichvutxt.TabIndex = 13;
             // 
             // label12
             // 
@@ -200,7 +200,7 @@
             this.chuandoantxt.Location = new System.Drawing.Point(274, 30);
             this.chuandoantxt.Name = "chuandoantxt";
             this.chuandoantxt.Size = new System.Drawing.Size(243, 44);
-            this.chuandoantxt.TabIndex = 22;
+            this.chuandoantxt.TabIndex = 9;
             // 
             // panel3
             // 
@@ -244,7 +244,7 @@
             this.Makham.Location = new System.Drawing.Point(1081, 278);
             this.Makham.Name = "Makham";
             this.Makham.Size = new System.Drawing.Size(179, 44);
-            this.Makham.TabIndex = 20;
+            this.Makham.TabIndex = 8;
             // 
             // nữ
             // 
@@ -253,7 +253,7 @@
             this.nữ.Location = new System.Drawing.Point(1180, 139);
             this.nữ.Name = "nữ";
             this.nữ.Size = new System.Drawing.Size(80, 40);
-            this.nữ.TabIndex = 19;
+            this.nữ.TabIndex = 4;
             this.nữ.TabStop = true;
             this.nữ.Text = "Nữ";
             this.nữ.UseVisualStyleBackColor = true;
@@ -265,7 +265,7 @@
             this.nam.Location = new System.Drawing.Point(1026, 141);
             this.nam.Name = "nam";
             this.nam.Size = new System.Drawing.Size(100, 40);
-            this.nam.TabIndex = 18;
+            this.nam.TabIndex = 3;
             this.nam.TabStop = true;
             this.nam.Text = "Nam";
             this.nam.UseVisualStyleBackColor = true;
@@ -287,7 +287,7 @@
             this.Ngaysinh.Location = new System.Drawing.Point(186, 103);
             this.Ngaysinh.Name = "Ngaysinh";
             this.Ngaysinh.Size = new System.Drawing.Size(342, 35);
-            this.Ngaysinh.TabIndex = 14;
+            this.Ngaysinh.TabIndex = 2;
             // 
             // label9
             // 
@@ -306,7 +306,7 @@
             this.tentxt.Location = new System.Drawing.Point(1026, 65);
             this.tentxt.Name = "tentxt";
             this.tentxt.Size = new System.Drawing.Size(243, 44);
-            this.tentxt.TabIndex = 10;
+            this.tentxt.TabIndex = 1;
             // 
             // label8
             // 
@@ -325,7 +325,7 @@
             this.gmailtxt.Location = new System.Drawing.Point(186, 286);
             this.gmailtxt.Name = "gmailtxt";
             this.gmailtxt.Size = new System.Drawing.Size(543, 44);
-            this.gmailtxt.TabIndex = 8;
+            this.gmailtxt.TabIndex = 7;
             // 
             // label7
             // 
@@ -363,7 +363,7 @@
             this.sdttxt.Location = new System.Drawing.Point(186, 160);
             this.sdttxt.Name = "sdttxt";
             this.sdttxt.Size = new System.Drawing.Size(290, 44);
-            this.sdttxt.TabIndex = 4;
+            this.sdttxt.TabIndex = 5;
             // 
             // label3
             // 
