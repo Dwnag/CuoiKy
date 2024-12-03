@@ -24,6 +24,50 @@ namespace DangNhap
 
         }
 
+        void PhanQuyen()
+        {
+            if (Const.TaiKhoan == null)
+            {
+                MessageBox.Show("Không xác định được tài khoản hiện tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close(); // Đóng form nếu không có thông tin tài khoản
+                return;
+            }
+
+            // Từ điển ánh xạ loại tài khoản với các nút được phép sử dụng
+            Dictionary<TaiKhoan.loaiTK, List<Button>> phanQuyenMap = new Dictionary<TaiKhoan.loaiTK, List<Button>>()
+    {
+        { TaiKhoan.loaiTK.LT, new List<Button> { btnLetan } },
+        { TaiKhoan.loaiTK.BS, new List<Button> { btnBacsi } },
+        { TaiKhoan.loaiTK.QLK, new List<Button> { btnNhapxuatvattu } },
+        { TaiKhoan.loaiTK.CPK, new List<Button> { btnLetan, btnBacsi, btnNhapxuatvattu, btnChuphongkham, btnThongke } }
+    };
+
+            // Đặt mặc định tất cả các nút là không hoạt động
+            var allButtons = new List<Button> { btnLetan, btnBacsi, btnNhapxuatvattu, btnChuphongkham, btnMenu, btnQuanly, btnThongke, btnDangxuat };
+            foreach (var button in allButtons)
+            {
+                button.Enabled = false;
+            }
+
+            // Luôn bật các nút mặc định như Menu và Đăng xuất
+            btnMenu.Enabled = true;
+            btnDangxuat.Enabled = true;
+
+            // Kích hoạt các nút dựa trên loại tài khoản
+            if (phanQuyenMap.ContainsKey(Const.TaiKhoan.LoaiTaiKhoan))
+            {
+                foreach (var button in phanQuyenMap[Const.TaiKhoan.LoaiTaiKhoan])
+                {
+                    button.Enabled = true;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Loại tài khoản không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         private void btnDangxuat_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Bạn có muốn đăng xuất", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -33,7 +77,7 @@ namespace DangNhap
                 f1.Show();
                 this.Hide();
             }
-            
+
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -44,6 +88,7 @@ namespace DangNhap
         private void menu1_Load(object sender, EventArgs e)
         {
             updateButtonColors(btnMenu);
+            PhanQuyen();
         }
         private void menu_Click(object sender, EventArgs e)
         {
@@ -73,7 +118,7 @@ namespace DangNhap
 
         private void btnLetan_Click(object sender, EventArgs e)
         {
-            LeTan leTan = new LeTan(); 
+            LeTan leTan = new LeTan();
             leTan.Show();
             this.Hide();
         }
@@ -82,13 +127,13 @@ namespace DangNhap
             foreach (var button in new List<Button> { btnMenu, btnQuanly, btnThongke })
             {
                 // Màu mặc định
-                button.BackColor = Color.White; 
-                button.ForeColor = Color.Black; 
+                button.BackColor = Color.White;
+                button.ForeColor = Color.Black;
             }
 
             // Đổi màu cho nút hiện tại
-            activeButton.BackColor = Color.Gray; 
-            activeButton.ForeColor = Color.Black; 
+            activeButton.BackColor = Color.Gray;
+            activeButton.ForeColor = Color.Black;
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

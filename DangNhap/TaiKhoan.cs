@@ -14,10 +14,10 @@ namespace DangNhap
 
         public enum loaiTK
         {
-            letan,
-            quanlykho,
-            chuphongkham,
-            bacsi
+            LT,
+            QLK,
+            CPK,
+            BS
         }
 
         public TaiKhoan(string tenTaiKhoan, string matKhau, loaiTK loaiTaiKhoan)
@@ -28,18 +28,18 @@ namespace DangNhap
         }
 
 
-        public string TenTaiKhoan 
-        { 
-            get => tenTaiKhoan; 
-            set => tenTaiKhoan = value; 
+        public string TenTaiKhoan
+        {
+            get => tenTaiKhoan;
+            set => tenTaiKhoan = value;
         }
-        public string MatKhau 
-        { 
-            get => matKhau; 
-            set => matKhau = value; 
+        public string MatKhau
+        {
+            get => matKhau;
+            set => matKhau = value;
         }
-        public loaiTK LoaiTaiKhoan 
-        { 
+        public loaiTK LoaiTaiKhoan
+        {
             get => loaiTaiKhoan;
             set => loaiTaiKhoan = value;
         }

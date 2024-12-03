@@ -18,7 +18,7 @@ namespace DangNhap
     public partial class DangNhap : Form
     {
         private readonly SqlConnection connet = new SqlConnection(@"Data Source=localhost;Initial Catalog=ql1;Integrated Security=True");
-        
+
         public DangNhap()
         {
             InitializeComponent();
@@ -79,49 +79,49 @@ namespace DangNhap
         {
             string TenTaiKhoan = taikhoan.Text;
             string MatKhau = matkhau.Text;
+
             try
             {
-                String querry = "Select * FROM ThongTinDangNhap WHERE TaiKhoan = '" + taikhoan.Text + "' AND MatKhau = '" + matkhau.Text + "' ";
-                SqlDataAdapter adt = new SqlDataAdapter(querry, connet);
+                string query = "SELECT * FROM ThongTinDangNhap WHERE TaiKhoan = @TaiKhoan AND MatKhau = @MatKhau";
+                SqlCommand cmd = new SqlCommand(query, connet);
+                cmd.Parameters.AddWithValue("@TaiKhoan", TenTaiKhoan);
+                cmd.Parameters.AddWithValue("@MatKhau", MatKhau);
 
+                SqlDataAdapter adt = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 adt.Fill(dt);
 
                 if (dt.Rows.Count > 0)
                 {
-                    TenTaiKhoan = taikhoan.Text;
-                    MatKhau = matkhau.Text;
+                    // Khởi tạo thông tin tài khoản hiện tại
+                    string loaiTaiKhoan = dt.Rows[0]["LoaiTaiKhoan"].ToString();
+                    Const.TaiKhoan = new TaiKhoan(
+                        TenTaiKhoan,
+                        MatKhau,
+                        (TaiKhoan.loaiTK)Enum.Parse(typeof(TaiKhoan.loaiTK), loaiTaiKhoan)
+                    );
 
+                    // Chuyển đến Menu1
                     Menu1 menu = new Menu1();
                     menu.Show();
                     this.Hide();
                 }
                 else
                 {
-                    if (taikhoan.Text == "Tên đăng nhập" || matkhau.Text == "Mật khẩu" || taikhoan.Text == "Tên đăng nhập" || matkhau.Text == "Mật khẩu")
-                    {
-                        lblError.Text = "Vui lòng điền đầy đủ thông tin.";
-                        lblError.Visible = true;
-                        return;
-                    }
                     lblError.Text = "Thông tin đăng nhập không chính xác!";
                     lblError.Visible = true;
-
-                    taikhoan.Clear();
-                    matkhau.Clear();
-                    taikhoan.Focus();
-
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Lỗi khi kết nối đến cơ sở dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 connet.Close();
             }
         }
+
 
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -281,8 +281,8 @@ namespace DangNhap
         {
             if (e.KeyCode == Keys.Tab)
             {
-                e.IsInputKey = true; 
-                matkhau.Focus(); 
+                e.IsInputKey = true;
+                matkhau.Focus();
             }
         }
 
@@ -291,7 +291,7 @@ namespace DangNhap
             if (e.KeyCode == Keys.Tab)
             {
                 e.IsInputKey = true;
-                taikhoan.Focus();  
+                taikhoan.Focus();
             }
         }
 
